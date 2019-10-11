@@ -36,7 +36,7 @@
             </li>
           </ul>
 
-          <a class="btn btn-font">
+          <a class="btn">
             <img class="btn-icone" src="assets\image\btn-icon-chave.png" alt=""><span>Encontre meu novo lar</span>
           </a>
 

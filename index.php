@@ -19,12 +19,12 @@
     <? include('includes/banner.php'); ?>
 
     <!-- ____________________ ABOUT ____________________-->
-    <section class="como-funciona">
+    <section id="como-funciona">
       <div class="container">
-        <div class="title-section"> 
+        <div class="title-section">
           <h1>Como funciona ?</h1>
-      </div>
-        <div class="row col-12">
+        </div>
+        <div class="row col-12 py-md-4">
           <div class="col-md-4">
             <div class="icon_div">
               <span><img src="assets\image\comofunciona-icon1.png"></span>
@@ -53,20 +53,24 @@
             </div>
           </div>
         </div>
+        <div class="btn-saibaMais">
+          <a href="" class="btn">Saiba Mais</a>
+        </div>
       </div>
     </section>
+
     <!-- ____________________ DEPOIMENTOS ____________________-->
     <section id="testimonial">
       <div class="row col-12 pm-0">
-        <div class="col-6 bg-yellow">
-          <div class="card mt-2">
+        <div class="col-md-6 col-xs-12 bg-yellow">
+          <div class="card 100x100">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="100000">
               <div class="w-100 carousel-inner" role="listbox">
                 <div class="carousel-item active">
                   <div class="carousel-caption">
                     <div class="row">
                       <div class="col-sm-3">
-                        <img src="https://gravatar.com/avatar/b35505a8799ee6ec3cba72ac4c5185be?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" alt="" class="rounded-circle">
+                        <img src="http://placehold.it/100x100" alt="Foto depoimento" class="">
                       </div>
                       <div class="col-sm-9">
                         <h3>Gives me hope</h3>
@@ -80,7 +84,7 @@
                   <div class="carousel-caption">
                     <div class="row">
                       <div class="col-sm-3">
-                        <img src="https://gravatar.com/avatar/b35505a8799ee6ec3cba72ac4c5185be?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" alt="" class="rounded-circle">
+                        <img src="http://placehold.it/100x100" alt="Foto depoimento" class="">
                       </div>
                       <div class="col-sm-9">
                         <h3>You will love it.</h3>
@@ -94,7 +98,7 @@
                   <div class="carousel-caption">
                     <div class="row">
                       <div class="col-sm-3">
-                        <img src="https://gravatar.com/avatar/b35505a8799ee6ec3cba72ac4c5185be?s=80&d=https://codepen.io/assets/avatars/user-avatar-80x80-bdcd44a3bfb9a5fd01eb8b86f9e033fa1a9897c3a15b33adfc2649a002dab1b6.png" alt="" class="rounded-circle">
+                        <img src="http://placehold.it/100x100" alt="Foto depoimento" class="">
                       </div>
                       <div class="col-sm-9">
                         <h3>Velvet pouch!</h3>
@@ -116,8 +120,8 @@
             </div>
           </div>
         </div>
-        <div class="col-6 bg-black">
-
+        <div class="col-md-6 col-xs-12 bg-black">
+          <img src="http://placehold.it/1000x500" alt="Foto depoimento" class="">
         </div>
       </div>
     </section>
@@ -126,29 +130,58 @@
     <? include('includes/gallery.php'); ?>
 
     <!-- ____________________ BLOG ____________________-->
-    <section class="blog">
+    <section id="blog">
       <div class="container">
-        <div class="row col-12">
-          <div class="col-md-4 blog-text">
-            <span>24/05/2019</span>
-            <h3>Tittle</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam, dolorem repellendus earum molestias sapiente ex temporibus repudiandae?</p>
+        <div class="row col-12 mb-xs-3 mb-md-5">
+          <div class="col-7">
+            <h2>Últimas publicações do blog</h2>
           </div>
-          <div class="col-md-4">
-            <span>24/05/2019</span>
-            <h3>Tittle</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam, dolorem repellendus earum molestias sapiente ex temporibus repudiandae?</p>
+          <div class="col-5">
+            <a class="btn float-right" href="blog.php">Visitar blog</a>
           </div>
-          <div class="col-md-4">
-            <span>24/05/2019</span>
-            <h3>Tittle</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam, dolorem repellendus earum molestias sapiente ex temporibus repudiandae?</p>
+        </div>
+        <? include('includes/blog-div.php'); ?>
+      </div>
+    </section>
+
+    <!-- ____________________ Newsletter ____________________-->
+    <section id="newsletter">
+      <div class="seta">
+        <img class="img-fluid" src="assets\image\seta.png" alt="">
+      </div>
+
+      <div class="container">
+        <div class="row col-12 py-5">
+
+          <div class="col-5">
+            <h2>Receba nossa novidades</h2>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint error amet dolores cumque.
+            </p>
+          </div>
+
+          <div class="col-7">
+            <form>
+              <div class="form-row">
+                <div class="col">
+                  <input class="form-control" type="text" placeholder="Digite seu nome">
+                </div>
+                <div class="col">
+                  <input class="form-control" type="text" placeholder="Seu Email">
+                </div>
+                <button class="btn--white" type="submit">Receber novidades</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </section>
+
+
+
     <!-- ____________________ FOOTER ____________________-->
     <? include('includes/footer.php'); ?>
+
   </main>
 
   <!-- JavaScript -->

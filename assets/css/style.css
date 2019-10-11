@@ -4,37 +4,33 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.btn-yellow {
-  background-color: #FFCC29;
-  border-radius: 10px;
-  padding: 0.75rem;
+ .btn {
+  justify-content: flex-end !important;
+  border: 10px solid #FECC29;
+  background-color: #FECC29;
+  border-radius: 15px;
+  font-size: 1em;
   text-transform: uppercase;
+  font-weight: 900;
   color: black;
 }
-
-.btn-yellow:hover {
-  background-color: black;
-  color: #FFCC29;
+ .btn:hover {
+  background-color: rgb(254, 187, 41);
+  border: 10px solid rgb(254, 187, 41);
+  transform: scale(1.1);
 }
 
-.bg-yellow {
-  background-color: #FFCC29;
-  height: 50vh;
-  width: auto;
-  margin-left: 0;
-  padding-left: 0;
+.btn--white {
+  border: 10px solid #4C4C4C;
+  background-color: #4C4C4C;
 }
-
-.bg-black {
-  background-color: black;
-  height: 50vh;
-  width: auto;
-  margin-right: 0;
-  padding-right: 0;
+.btn--white:hover {
+  background-color: #4C4C4C;
+  border: 10px solid #4C4C4C;
 }
 
 .pm-0 {
@@ -59,7 +55,7 @@ header .nav-link {
   margin-left: 0.75rem;
   font-size: 1.05em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 800;
   color: black !important;
 }
 
@@ -78,44 +74,27 @@ header .btn-icone {
   margin-bottom: 0.25em;
 }
 
-header .btn-font {
-  font-size: 1em;
-  text-transform: uppercase;
-  font-weight: bold;
-  color:black;
-}
-
-header .btn {
-  justify-content: flex-end !important;
-  border: 10px solid #FECC29;
-  background-color: #FECC29;
-  border-radius: 15px;
-}
-
-header .btn:hover {
-  background-color: rgb(254, 187, 41);
-  border: 10px solid rgb(254, 187, 41);
-  transform: scale(1.1);
-}
-
 /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
 
-.carousel {
-  margin-bottom: 4rem;
-  margin-top: 150px;
+#banner {
+  margin-top: 9rem;
 }
 
-.carousel-caption {
+#banner .carousel {
+  margin-bottom: 4rem;
+}
+
+#banner .carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
-.carousel-item {
+#banner .carousel-item {
   height: 32rem;
 }
 
-.carousel-item>img {
+#banner .carousel-item>img {
   position: absolute;
   background: cover;
   top: 0;
@@ -124,12 +103,12 @@ header .btn:hover {
   height: 32rem;
 }
 
-.carousel-seta {
+#banner .carousel-seta {
   width: auto;
   z-index: 100;
 }
 
-.carousel-seta img {
+#banner .carousel-seta img {
   position: absolute;
   right: 50%;
   -webkit-transform: translate(50%);
@@ -140,47 +119,78 @@ header .btn:hover {
 /* About
   -------------------------------------------------- */
 
-.como-funciona .title-section h1 {
+#como-funciona h1 {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
   font-size: 2rem;
   margin-bottom: 4rem;
+  font-weight: 900;
 }
 
-.como-funciona {
+#como-funciona {
   border-bottom: thin #edf1f2 solid;
   padding: 22.85px 0;
   margin-bottom: 7rem;
   margin-top: 5rem;
 }
 
-.como-funciona .icon_div {
+#como-funciona .icon_div {
   display: inline-block;
   margin-left: 4rem;
   vertical-align: middle;
 }
 
-.como-funciona .text_div {
+#como-funciona .text_div {
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
 }
 
-.como-funciona .text_div span {
+#como-funciona .text_div span {
   color: #58666e;
   font-size: 1.15em;
 }
 
-/* Featurettes
-  ------------------------- */
+.btn-saibaMais {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+/* DEPOIMENTOS
+  -------------------------------------------------- */
+
+.bg-yellow {
+  background-color: #FFCC29;
+  height: 500px;
+  width: auto;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.bg-black {
+  height: auto;
+  width: 100%;
+  margin-right: 0;
+  padding-right: 0;
+  background-color: black;
+  padding-left: 0;
+}
+
+.bg-black img {
+  background-image: cover;
+}
 
 .card {
   margin: 5%;
+  background: #FFCC29;
 }
 
 .card .carousel-item {
-  height: 200px;
+  position: relative;
+  height: 90%;
 }
 
 .card .carousel-caption {
@@ -246,71 +256,74 @@ header .btn:hover {
   }
 }
 
-/* RESPONSIVE CSS
+/* REGIAO
   -------------------------------------------------- */
 
-@media (min-width: 40em) {
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 1.25rem;
-    font-size: 1.25rem;
-    line-height: 1.4;
-  }
-  .featurette-heading {
-    font-size: 50px;
-  }
+#regiao {
+  margin-bottom: 5rem;
 }
 
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
+#regiao h2 {
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
 }
 
-/* Carousel text */
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+#regiao .carousel-item {
+  height: 15rem; 
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
-  /* */
-}
-
-/* Gallery */
-
-.gallery .carousel-item {
-  height: 14rem;
-}
-
-.gallery .carousel-indicators {
-  left: 0;
-  bottom: -40px;
-}
-
-.gallery .carousel-indicators li {
+#regiao .carousel-indicators li {
   background: black;
   border-radius: 100%;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border: 5px;
 }
 
-.gallery .carousel-indicators .active {
+#regiao .carousel-indicators .active {
   background: #FECC29;
 }
 
-/* Blog */
+.img-regiao {
+  border-radius: 20px;
+}
 
+/* BLOG */
+#blog h2 {
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+}
 
+#blog {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  background-color: #F3F3F3;
+}
+
+/* NEWSLETTER */
+#newsletter {
+  background: #4C4C4C;
+  color: white;
+}
+
+#newsletter .seta {
+  width: auto;
+  z-index: 100;
+}
+
+#newsletter .seta img {
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translate(50%);
+  transform: translate(50%);
+  margin-top: -31px !important;
+}
 
 /* The colour of the indicators */
-
