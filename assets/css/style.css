@@ -2,13 +2,13 @@
 -------------------------------------------------- */
 
 body {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  margin-top: 12rem;
+  padding-bottom: 0rem;
   color: black;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
- .btn {
+.btn {
   justify-content: flex-end !important;
   border: 10px solid #FECC29;
   background-color: #FECC29;
@@ -18,17 +18,19 @@ body {
   font-weight: 900;
   color: black;
 }
- .btn:hover {
+
+.btn:hover {
   background-color: rgb(254, 187, 41);
   border: 10px solid rgb(254, 187, 41);
   transform: scale(1.1);
 }
 
-.btn--white {
+.btn .btn-white {
   border: 10px solid #4C4C4C;
   background-color: #4C4C4C;
 }
-.btn--white:hover {
+
+.btn .btn-white:hover {
   background-color: #4C4C4C;
   border: 10px solid #4C4C4C;
 }
@@ -36,6 +38,36 @@ body {
 .pm-0 {
   margin: 0;
   padding: 0;
+}
+
+.ml-0 {
+  margin-left: 0;
+}
+
+.mr-0 {
+  margin-right: 0;
+}
+
+.mrl-0 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.pr-0 {
+  padding-right: 0;
+}
+
+.lr-0 {
+  padding-left: 0;
+}
+
+.prl-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.pt-6 {
+  padding-top: 6rem;
 }
 
 /* Navbar */
@@ -76,11 +108,6 @@ header .btn-icone {
 
 /* CUSTOMIZE THE CAROUSEL
   -------------------------------------------------- */
-
-#banner {
-  margin-top: 9rem;
-}
-
 #banner .carousel {
   margin-bottom: 4rem;
 }
@@ -170,7 +197,32 @@ header .btn-icone {
   padding-left: 0;
 }
 
-.bg-black {
+#testimonial .container {
+  position: relative;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  top: 25%;
+}
+
+#testimonial .bg-yellow img {
+  border-radius: 20px;
+  float: right;
+}
+
+#testimonial p {
+  overflow-wrap: break-word;
+}
+
+#testimonial .btn {
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  text-transform: none;
+  border: 5px solid black;
+  float: right;
+}
+
+#testimonial .bg-black {
   height: auto;
   width: 100%;
   margin-right: 0;
@@ -181,79 +233,8 @@ header .btn-icone {
 
 .bg-black img {
   background-image: cover;
-}
-
-.card {
-  margin: 5%;
-  background: #FFCC29;
-}
-
-.card .carousel-item {
-  position: relative;
-  height: 90%;
-}
-
-.card .carousel-caption {
-  padding: 0;
-  right: 0;
-  left: 0;
-  color: #3d3d3d;
-}
-
-.card .carousel-caption h3 {
-  color: #3d3d3d;
-}
-
-.card .carousel-caption p {
-  line-height: 30px;
-}
-
-.card .carousel-caption .col-sm-3 {
-  display: flex;
-  align-items: center;
-}
-
-.card .carousel-caption .col-sm-9 {
-  text-align: left;
-}
-
-.card .carousel-control-prev, .card .carousel-control-next {
-  color: #3d3d3d !important;
-  opacity: 1 !important;
-}
-
-/**
-  MEDIA QUERIES
-*/
-
-/* Small devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-  #quote-carousel {
-    margin-bottom: 0;
-    padding: 0 40px 30px 40px;
-    margin-top: 30px;
-  }
-}
-
-/* Small devices (tablets, up to 768px) */
-
-@media (max-width: 768px) {
-  /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-  #quote-carousel .carousel-indicators {
-    bottom: -20px !important;
-  }
-  #quote-carousel .carousel-indicators li {
-    display: inline-block;
-    margin: 0px 5px;
-    width: 15px;
-    height: 15px;
-  }
-  #quote-carousel .carousel-indicators li.active {
-    margin: 0px 5px;
-    width: 20px;
-    height: 20px;
-  }
+  width: 100%;
+  max-height: 500px;
 }
 
 /* REGIAO
@@ -274,7 +255,7 @@ header .btn-icone {
 }
 
 #regiao .carousel-item {
-  height: 15rem; 
+  height: 15rem;
 }
 
 #regiao .carousel-indicators li {
@@ -293,7 +274,9 @@ header .btn-icone {
   border-radius: 20px;
 }
 
-/* BLOG */
+/* BLOG 
+  -------------------------------------------------- */
+
 #blog h2 {
   justify-content: center;
   text-transform: uppercase;
@@ -307,10 +290,13 @@ header .btn-icone {
   background-color: #F3F3F3;
 }
 
-/* NEWSLETTER */
+/* NEWSLETTER
+  -------------------------------------------------- */
+
 #newsletter {
   background: #4C4C4C;
   color: white;
+  height: 320px;
 }
 
 #newsletter .seta {
@@ -326,4 +312,176 @@ header .btn-icone {
   margin-top: -31px !important;
 }
 
-/* The colour of the indicators */
+#newsletter .container {
+  position: relative;
+  top: 17%;
+}
+
+#newsletter h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+#newsletter p {
+  padding-top: 1rem;
+  padding-right: 2rem;
+}
+
+#newsletter input {
+  font-size: 18px;
+  padding: 20px 10px 10px 5px;
+  -webkit-appearance: none;
+  display: block;
+  background: #4C4C4C;
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+#newsletter input:focus {
+  outline: none;
+}
+
+#newsletter label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 15px;
+  transition: all 0.2s ease;
+}
+
+#newsletter input:focus~label, input.used~label {
+  top: -30px;
+  transform: scale(.75);
+  left: 10px;
+  color: white;
+}
+
+#newsletter .btn:hover {
+  transform: none;
+}
+
+/* FOOTER 
+  -------------------------------------------------- */
+
+footer {
+  background-color: black;
+  widows: 100%;
+  height: 500px;
+}
+
+footer img {
+  border-radius: 20px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+footer h4 {
+  color: white;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+footer span {
+  color: #FECC29;
+}
+
+footer p {
+  color: white;
+}
+
+footer .btn span {
+  color: black !important;
+}
+
+.fa-envelope {
+  background-color: #FECC29;
+}
+
+/* xxxxxxxxxxxxxx REGIAO xxxxxxxxxxxxxx
+----------------------------------------*/
+body {
+  margin-top: 13rem;
+  padding-bottom: 0rem;
+  color: black;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* REGIOES
+  -------------------------------------------------- */
+#regioes {
+  background-color: #E7E7E7;
+  width: 100%;
+  height: 200px;
+}
+
+#regioes h1 {
+  color: black;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 25px;
+  top: ;
+}
+
+.regiao-seta img {
+  position: absolute;
+  right: 50%;
+  top: 377px;
+  -webkit-transform: translate(50%);
+  transform: translate(50%);
+}
+
+/* CIDADES
+  -------------------------------------------------- */
+
+#cidades {
+  margin-top: 5rem;
+}
+
+#cidades h2, h3 {
+  padding-left: 1rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+#cidades h3 {
+  color: #FECC29;
+}
+
+#cidades img {
+  opacity: 0.5;
+}
+
+/* DESTAQUES
+  -------------------------------------------------- */
+
+#destaques .bg-yellow{
+  border-radius: 20px;
+}
+
+/* LOCALIZAÇÃO
+  -------------------------------------------------- */
+
+#localização {}
+
+/* ATENDIMENTO
+  -------------------------------------------------- */
+#atendimento {
+  background-color: #1598BD;
+  height: 320px;
+  width: 100%;
+}
+
+.atendimento-seta img {
+  position: absolute;
+  right: 50%;
+  -webkit-transform: translate(50%);
+  transform: translate(50%);
+}
