@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="btn-saibaMais">
-        <a href="" class="btn">Saiba Mais</a>
+        <a href="#" class="btn">Saiba Mais</a>
       </div>
     </div>
   </section>
@@ -72,7 +72,6 @@
             </div>
           </div>
         </div>
-
       </div>
       <div class="col-md-6 col-xs-12 bg-black">
         <img src="http://placehold.it/650x500" alt="Foto depoimento" class="">
@@ -115,11 +114,11 @@
           <form>
             <div class="form-row mt-4">
               <div class="col">
-                <input type="text"><span></span>
+                <input type="text">
                 <label>Nome</label>
               </div>
               <div class="col">
-                <input type="email"><span></span>
+                <input type="email">
                 <label>Email</label>
               </div>
               <button class="btn mrl-0">Receber novidades</button>

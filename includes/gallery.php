@@ -1,9 +1,8 @@
-<div id="regiao" class="container">
+<div id="regiaoCarousel" class="container">
   <div class="row mt-md-5">
     <div class="col-md-12">
-
       <div class="d-flex w-100 justify-content-center">
-        <h2><img class="icone-regiao img-fluid mr-2" src="assets\image\icon-regiao.png" />Região</h2>
+        <h2><img class="icone-regiao img-fluid mr-2" src="assets\image\icon-regiao.png"/>Região</h2>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">

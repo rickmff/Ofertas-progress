@@ -5,6 +5,7 @@ body {
   margin-top: 12rem;
   padding-bottom: 0rem;
   color: black;
+  background-color: white;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -70,7 +71,11 @@ body {
   padding-top: 6rem;
 }
 
-/* Navbar */
+/* HEADER
+  -------------------------------------------------- */
+header .bg-light{
+  background-color: white !important;
+}
 
 header .expand {
   padding-top: 3.750rem;
@@ -106,28 +111,10 @@ header .btn-icone {
   margin-bottom: 0.25em;
 }
 
-/* CUSTOMIZE THE CAROUSEL
+/* BANNER
   -------------------------------------------------- */
 #banner .carousel {
   margin-bottom: 4rem;
-}
-
-#banner .carousel-caption {
-  bottom: 3rem;
-  z-index: 10;
-}
-
-#banner .carousel-item {
-  height: 32rem;
-}
-
-#banner .carousel-item>img {
-  position: absolute;
-  background: cover;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 32rem;
 }
 
 #banner .carousel-seta {
@@ -145,7 +132,6 @@ header .btn-icone {
 
 /* About
   -------------------------------------------------- */
-
 #como-funciona h1 {
   display: flex;
   justify-content: center;
@@ -188,7 +174,6 @@ header .btn-icone {
 
 /* DEPOIMENTOS
   -------------------------------------------------- */
-
 .bg-yellow {
   background-color: #FFCC29;
   height: 500px;
@@ -239,7 +224,6 @@ header .btn-icone {
 
 /* REGIAO
   -------------------------------------------------- */
-
 #regiao {
   margin-bottom: 5rem;
 }
@@ -276,7 +260,6 @@ header .btn-icone {
 
 /* BLOG 
   -------------------------------------------------- */
-
 #blog h2 {
   justify-content: center;
   text-transform: uppercase;
@@ -292,7 +275,6 @@ header .btn-icone {
 
 /* NEWSLETTER
   -------------------------------------------------- */
-
 #newsletter {
   background: #4C4C4C;
   color: white;
@@ -368,7 +350,6 @@ header .btn-icone {
 
 /* FOOTER 
   -------------------------------------------------- */
-
 footer {
   background-color: black;
   widows: 100%;
@@ -410,6 +391,7 @@ body {
   margin-top: 13rem;
   padding-bottom: 0rem;
   color: black;
+  background-color: white;
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
@@ -421,12 +403,25 @@ body {
   height: 200px;
 }
 
+#regioes .container{
+  padding-top: 3rem;
+}
+
+#regioes span {
+  font-size: 0.75rem;
+}
+
+#regioes .icone-regiao {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
 #regioes h1 {
   color: black;
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 25px;
-  top: ;
+  font-size: 2rem;
+  padding-right: 2rem;
 }
 
 .regiao-seta img {
@@ -439,13 +434,11 @@ body {
 
 /* CIDADES
   -------------------------------------------------- */
-
 #cidades {
   margin-top: 5rem;
 }
 
 #cidades h2, h3 {
-  padding-left: 1rem;
   text-transform: uppercase;
   font-weight: 900;
   font-size: 1.2rem;
@@ -457,19 +450,76 @@ body {
 
 #cidades img {
   opacity: 0.5;
+  border-radius: 20px;
+}
+
+#cidades .carousel-indicators li {
+  background: black;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  border: 5px;
+}
+
+#cidades .carousel-indicators .active {
+  background: #FECC29;
 }
 
 /* DESTAQUES
   -------------------------------------------------- */
+#destaques {
+  margin-top: 5rem;
+  line-height: 1.7rem;
+}
 
 #destaques .bg-yellow{
   border-radius: 20px;
+/*   margin-left: 15px !important; */
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 5rem;
+  padding-right: 4rem;
+  max-height: 410px;
+}
+
+#destaques h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+#destaques img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#destaques .icon_title h2 {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+  margin-left: 1rem;
+}
+
+.icon_destaques {
+  margin:auto;
+}
+
+#destaques .text_destaques {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 3.5rem;
+  padding-right: 0;
 }
 
 /* LOCALIZAÇÃO
   -------------------------------------------------- */
 
-#localização {}
+#localização h2 {
+  text-transform: uppercase;
+  font-weight: 900;
+}
 
 /* ATENDIMENTO
   -------------------------------------------------- */

@@ -13,7 +13,10 @@ require 'cms/classes/functions.php';
 <!--<![endif]-->
 
 <head>
+	<!-- ____________________ CONIFG METAS ____________________-->
 	<? include('includesConfig/metas.php'); ?>
+	
+	<!-- ____________________ CONFIG CSS ____________________-->
 	<? include('includesConfig/css.php'); ?>
 </head>
 
@@ -26,21 +29,21 @@ require 'cms/classes/functions.php';
 		<div class="container">
 			<span>Home / Regiões</span>
 			<div class="d-flex w-100 justify-content-center">
-				<img class="icone-regiao img-fluid mr-2" src="assets\image\icon-regiao.png" />
-				<h1>Região</h1>
+				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+				<h1>Regiões</h1>
 			</div>
-
 			<div class="regiao-seta">
 				<img class="img-fluid" src="assets\image\seta.png" alt="">
 			</div>
 		</div>
 	</section>
+
 	<!-- ____________________ CIDADES ____________________-->
 	<section id="cidades">
-		<div class="container my-5">
+		<div class="container my-5 pl-0">
 			<h2>Região ipsum Amet sic</h2>
 			<h3>Nome da cidade</h3>
-			<div class="row col-12">
+			<div class="row mt-4">
 				<div class="col-6">
 					<img src="http://placehold.it/500x350" alt="">
 				</div>
@@ -50,6 +53,13 @@ require 'cms/classes/functions.php';
 						<img src="http://placehold.it/250x250" alt="">
 					</div>
 				</div>
+				<div id="cidadesCarousel" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#cidadesCarousel" data-slide-to="0" class="active"></li>
+						<li data-target="#cidadesCarousel" data-slide-to="1"></li>
+						<li data-target="#cidadesCarousel" data-slide-to="2"></li>
+					</ol>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -57,22 +67,32 @@ require 'cms/classes/functions.php';
 	<!-- ____________________ DESTAQUES ____________________-->
 	<section id="destaques">
 		<div class="container">
-			<div class="row col-12">
+			<div class="row">
 				<div class="col-7 bg-yellow">
-					<img src="">
-					<h2>Destaques da região</h2>
-					<div>
-					<img src="">
-					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dolorum numquam quisquam suscipit nobis, impedit sunt possimus, vel quod qui iure similique laudantium quas totam, error voluptatem. Hic, vel ducimus.</span>
+					<div class="icon_title">
+						<img src="assets\image\icon-star.png">
+						<h2>Destaques da região</h2>
 					</div>
-					<div>
-					<img src="">
-					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus est rerum modi autem tenetur quisquam ut, possimus commodi sint dolorum odio sed nesciunt minima similique error iusto debitis neque perferendis.</span>
+					<div class="row mt-5">
+						<div class="col-2 icon_destaques">
+							<img src="assets\image\icon-predios.png">
+						</div>
+						<div class="col-10 pr-5">
+							<span>Lorem ipsum dolor sit amet. Neque omnis cudis doloremque dolores iusto cum quae quas in natus. Sit, ducimus.</span>
+						</div>
+					</div>
+					<div class="row mt-4">
+						<div class="col-2 icon_destaques">
+							<img src="assets\image\icon-pessoas.png">
+						</div>
+						<div class="col-10 pr-5">
+							<span>Lorem ipsum dolor sit amet. Neque omnis cudis doloremque dolores iusto cum quae quas in natus. Sit, ducimus.</span>
+						</div>
 					</div>
 				</div>
-				<div class="col-5">
-					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta repudiandae quo doloremque, officia excepturi ea soluta nemo ratione nihil accusantium, id dolorum doloribus. Inventore nisi delectus unde repellendus repellat?</span>
-					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta repudiandae quo doloremque, officia excepturi ea soluta nemo ratione nihil accusantium, id dolorum doloribus. Inventore nisi delectus unde repellendus repellat?</span>
+				<div class="col-5 text_destaques">
+					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta repudiandae quo doloremque, officia excepturi ea soluta nemo ratione nihil Aperiam dicta repudiandae quo doloremque<br><br>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta repudiandae quo doloremque, officia excepturi ea soluta nemo ratione nihil Aperiam dicta repudiandae quo doloremque</span>
 				</div>
 			</div>
 		</div>
@@ -104,10 +124,11 @@ require 'cms/classes/functions.php';
 			</div>
 	</section>
 
-	</div>
 	<!-- ____________________ FOOTER ____________________-->
 	<? include('includes/footer.php'); ?>
 
+	
+	<!-- ____________________ CONFIG JS ____________________-->
 	<? include('includesConfig/js.php'); ?>
 	<? include('includes/analytics.php'); ?>
 </body>
