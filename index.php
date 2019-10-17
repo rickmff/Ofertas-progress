@@ -16,65 +16,43 @@
   <!-- ____________________ BANNER ____________________-->
   <? include('includes/banner.php'); ?>
 
-  <!-- ____________________ ABOUT ____________________-->
-  <section id="como-funciona">
-    <div class="container">
-      <div class="title-section">
-        <h1>Como funciona?</h1>
-      </div>
-      <div class="row col-12 py-md-4">
-        <div class="col-md-4">
-          <div class="icon_div">
-            <span><img src="assets\image\comofunciona-icon1.png"></span>
-          </div>
-          <div class="text_div">
-            <span>Lorem ipsum </span><br>
-            <span>Description</span>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="icon_div">
-            <span><img src="assets\image\comofunciona-icon2.png"></span>
-          </div>
-          <div class="text_div">
-            <span>Lorem ipsum </span><br>
-            <span>Description</span>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="icon_div">
-            <span><img src="assets\image\comofunciona-icon3.png"></span>
-          </div>
-          <div class="text_div">
-            <span>Lorem ipsum </span><br>
-            <span>Description</span>
-          </div>
-        </div>
-      </div>
-      <div class="btn-saibaMais">
-        <a href="#" class="btn">Saiba Mais</a>
-      </div>
-    </div>
-  </section>
+  <!-- ____________________ COMO FUNCIONA ____________________-->
+  <? include('includes\como-funciona-div.php'); ?>
 
   <!-- ____________________ DEPOIMENTOS ____________________-->
-  <section id="testimonial">
-    <div class="row col-12 pm-0">
-      <div class="col-md-6 col-xs-12 bg-yellow">
-        <div class="container">
-          <div class="row col-12 pr-0 mr-0">
-            <div class="col-4">
-              <img src="http://placehold.it/150x150" alt="">
+  <section id="depoimentos">
+    <div class="bg-yellow">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="row col-12 title-section">
+              <h2>Casos de sucesso</h2>
             </div>
-            <div class="col-8 pr-0">
-              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum facere cupiditate in, dolore, nulla aliquam non dolores </p>
-              <a class="btn w-100" href="#">Maria da silva - Sorocaba/SP | Empreendimento X</a>
+            <div id="depoimentosCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#depoimentosCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#depoimentosCarousel" data-slide-to="1"></li>
+                <li data-target="#depoimentosCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <? include('includes/depoimento.php'); ?>
+                </div>
+                <div class="carousel-item">
+                  <? include('includes/depoimento.php'); ?>
+                </div>
+                <div class="carousel-item">
+                  <? include('includes/depoimento.php'); ?>
+                </div>
+              </div>
             </div>
           </div>
+
+          <div class="col-md-6 col-xs-12">
+            <img src="http://placehold.it/1000x500" alt="Foto depoimento">
+          </div>
+
         </div>
-      </div>
-      <div class="col-md-6 col-xs-12 bg-black">
-        <img src="http://placehold.it/650x500" alt="Foto depoimento" class="">
       </div>
     </div>
   </section>
@@ -82,8 +60,8 @@
   <!-- ____________________ GALLERY ____________________-->
   <? include('includes/gallery.php'); ?>
 
-  <!-- ____________________ BLOG ____________________-->
-  <section id="blog">
+  <!-- ____________________ BLOG-DIV ____________________-->
+  <section id="blog-div">
     <div class="container">
       <div class="row col-12 mb-xs-3 mb-md-5">
         <div class="col-7">
@@ -93,41 +71,32 @@
           <a class="btn float-right" href="blog.php">Visitar blog</a>
         </div>
       </div>
-      <? include('includes/blog-div.php'); ?>
-    </div>
-  </section>
-
-  <!-- ____________________ Newsletter ____________________-->
-  <section id="newsletter">
-    <div class="seta">
-      <img class="img-fluid" src="assets\image\seta.png" alt="">
-    </div>
-    <div class="container prl-0">
-      <div class="row col-12 mrl-0 prl-0 py-5">
-        <div class="col-5 pl-0 pr-4">
-          <h2>Receba nossa novidades</h2>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint error amet dolores cumque.
-          </p>
+      <div class="row col-12 pr-0">
+        <div class="col-md-4">
+          <span>24/05/2019</span>
+          <h3>Tittle lorem ipsum sit depscur es</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam.</p>
+          <div class="blog-saibaMais">Saiba mais</div>
         </div>
-        <div class="col-7 prl-0">
-          <form>
-            <div class="form-row mt-4">
-              <div class="col">
-                <input type="text">
-                <label>Nome</label>
-              </div>
-              <div class="col">
-                <input type="email">
-                <label>Email</label>
-              </div>
-              <button class="btn mrl-0">Receber novidades</button>
-            </div>
-          </form>
+        <div class="col-md-4">
+          <span>24/05/2019</span>
+          <h3>Tittle lorem ipsum sit depscur es</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam.</p>
+          <div class="blog-saibaMais">Saiba mais</div>
+        </div>
+        <div class="col-md-4">
+          <span>24/05/2019</span>
+          <h3>Tittle lorem ipsum sit depscur es</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam.</p>
+          <div class="blog-saibaMais">Saiba mais</div>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- ____________________ Newsletter ____________________-->
+  <? include('includes\newsletter.php'); ?>
+
   <!-- ____________________ FOOTER ____________________-->
   <? include('includes/footer.php'); ?>
 

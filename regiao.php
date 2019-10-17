@@ -15,7 +15,7 @@ require 'cms/classes/functions.php';
 <head>
 	<!-- ____________________ CONIFG METAS ____________________-->
 	<? include('includesConfig/metas.php'); ?>
-	
+
 	<!-- ____________________ CONFIG CSS ____________________-->
 	<? include('includesConfig/css.php'); ?>
 </head>
@@ -32,7 +32,7 @@ require 'cms/classes/functions.php';
 				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
 				<h1>Regiões</h1>
 			</div>
-			<div class="regiao-seta">
+			<div class="regioes-seta">
 				<img class="img-fluid" src="assets\image\seta.png" alt="">
 			</div>
 		</div>
@@ -47,20 +47,65 @@ require 'cms/classes/functions.php';
 				<div class="col-6">
 					<img src="http://placehold.it/500x350" alt="">
 				</div>
+
 				<div class="col-6">
-					<div class="carousel">
-						<img src="http://placehold.it/250x250" alt="">
-						<img src="http://placehold.it/250x250" alt="">
+					<div id="cidadesCarousel" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#cidadesCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#cidadesCarousel" data-slide-to="1"></li>
+							<li data-target="#cidadesCarousel" data-slide-to="2"></li>
+						</ol>
+						<div class="carousel-inner">
+
+							<div class="carousel-item active">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#">
+											<img src="http://placehold.it/250x250" alt="Image">
+										</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#">
+											<img src="http://placehold.it/250x250" alt="Image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#">
+											<img src="http://placehold.it/250x250" alt="Image">
+										</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#">
+											<img src="http://placehold.it/250x250" alt="Image">
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="row">
+									<div class="col-md-6">
+										<a href="#">
+											<img src="http://placehold.it/250x250" alt="Image">
+										</a>
+									</div>
+									<div class="col-md-6">
+										<a href="#">
+											<img src="http://placehold.it/250x250" alt="Image">
+										</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
 					</div>
 				</div>
-				<div id="cidadesCarousel" class="carousel slide" data-ride="carousel">
-					<ol class="carousel-indicators">
-						<li data-target="#cidadesCarousel" data-slide-to="0" class="active"></li>
-						<li data-target="#cidadesCarousel" data-slide-to="1"></li>
-						<li data-target="#cidadesCarousel" data-slide-to="2"></li>
-					</ol>
-				</div>
 			</div>
+
+		</div>
 		</div>
 	</section>
 
@@ -99,8 +144,8 @@ require 'cms/classes/functions.php';
 	</section>
 
 	<!-- ____________________ LOCALIZAÇÃO ____________________-->
-	<section id="localização">
-		<div class="container my-5">
+	<section id="localizacao">
+		<div class="container">
 			<h2>Localização</h2>
 			<div>
 				<iframe height="400px" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5021966373893!2d-47.441391985023216!3d-23.514433384706166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf60329d5a4ab7%3A0x11958ea7ef6d3095!2sR.%20Peru%2C%20120%20-%20Vila%20Barcelona%2C%20Sorocaba%20-%20SP%2C%2018025-290!5e0!3m2!1spt-BR!2sbr!4v1567272843509!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen=""></iframe>
@@ -108,26 +153,11 @@ require 'cms/classes/functions.php';
 	</section>
 
 	<!-- ____________________ ATENDIMENTO ____________________-->
-	<section id="atendimento">
-		<div class="container">
-			<div class="atendimento-seta">
-				<img class="img-fluid" src="assets\image\seta.png" alt="">
-			</div>
-			<div class="row col-12 pt-5">
-				<div class="col-6">
-					<h2>Encontre meu novo lar</h2>
-					<span>Precisamos conhecer um pouco mais sobre voçê e entender melhor sua característica para buscar o melhor imóvel que atenda suas necessidades.</span>
-				</div>
-				<div class="col-6">
-					<a class="btn"><img src="">Começar atendimento</a>
-				</div>
-			</div>
-	</section>
+	<? include('includes/atendimento.php'); ?>
 
 	<!-- ____________________ FOOTER ____________________-->
 	<? include('includes/footer.php'); ?>
 
-	
 	<!-- ____________________ CONFIG JS ____________________-->
 	<? include('includesConfig/js.php'); ?>
 	<? include('includes/analytics.php'); ?>

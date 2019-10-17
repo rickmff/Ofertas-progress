@@ -3,7 +3,6 @@
 
 body {
   margin-top: 12rem;
-  padding-bottom: 0rem;
   color: black;
   background-color: white;
   font-family: 'M PLUS Rounded 1c', sans-serif;
@@ -34,6 +33,10 @@ body {
 .btn .btn-white:hover {
   background-color: #4C4C4C;
   border: 10px solid #4C4C4C;
+}
+
+.bg-gray{
+  background-color: #E7E7E7;
 }
 
 .pm-0 {
@@ -73,16 +76,19 @@ body {
 
 /* HEADER
   -------------------------------------------------- */
-header .bg-light{
+
+header .bg-light {
   background-color: white !important;
 }
 
 header .expand {
+  transition: 0.5s all;
   padding-top: 3.750rem;
   padding-bottom: 3.3750rem;
 }
 
-.retract {
+header .retract {
+  transition: 0.5s all;
   padding-top: 1.750rem !important;
   padding-bottom: 1.3750rem !important;
 }
@@ -111,8 +117,12 @@ header .btn-icone {
   margin-bottom: 0.25em;
 }
 
+/* xxxxxxxxxxxxxx INDEX xxxxxxxxxxxxxx
+----------------------------------------*/
+
 /* BANNER
   -------------------------------------------------- */
+
 #banner .carousel {
   margin-bottom: 4rem;
 }
@@ -130,9 +140,10 @@ header .btn-icone {
   margin-top: -31px !important;
 }
 
-/* About
+/* COMO FUNCIONA DIV
   -------------------------------------------------- */
-#como-funciona h1 {
+
+#como-funciona-div h1 {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -141,26 +152,26 @@ header .btn-icone {
   font-weight: 900;
 }
 
-#como-funciona {
+#como-funciona-div {
   border-bottom: thin #edf1f2 solid;
   padding: 22.85px 0;
-  margin-bottom: 7rem;
-  margin-top: 5rem;
+  padding-bottom: 7rem;
+  padding-top: 3rem;
 }
 
-#como-funciona .icon_div {
+#como-funciona-div .icon_div {
   display: inline-block;
   margin-left: 4rem;
   vertical-align: middle;
 }
 
-#como-funciona .text_div {
+#como-funciona-div .text_div {
   display: inline-block;
   margin-left: 10px;
   vertical-align: middle;
 }
 
-#como-funciona .text_div span {
+#como-funciona-div .text_div span {
   color: #58666e;
   font-size: 1.15em;
 }
@@ -172,8 +183,9 @@ header .btn-icone {
   margin-top: 5rem;
 }
 
-/* DEPOIMENTOS
+/* CASOS DE SUCESSO DIV
   -------------------------------------------------- */
+
 .bg-yellow {
   background-color: #FFCC29;
   height: 500px;
@@ -182,23 +194,35 @@ header .btn-icone {
   padding-left: 0;
 }
 
-#testimonial .container {
-  position: relative;
-  padding-left: 4rem;
-  padding-right: 2rem;
-  top: 25%;
+#casos-div .title-section h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  padding-left: 15px;
 }
 
-#testimonial .bg-yellow img {
+#casos-div .avatar {
   border-radius: 20px;
-  float: right;
 }
 
-#testimonial p {
+#casos-div p {
   overflow-wrap: break-word;
+  font-size: 1.1rem;
 }
 
-#testimonial .btn {
+#casos-div a {
+  font-size: 0.8rem;
+  padding: auto;
+}
+
+#casos-div a:hover {
+  transform: scale(1) !important;
+  cursor: default;
+}
+
+#casos-div .btn {
   background-color: black;
   color: white;
   font-weight: 400;
@@ -207,28 +231,34 @@ header .btn-icone {
   float: right;
 }
 
-#testimonial .bg-black {
-  height: auto;
-  width: 100%;
-  margin-right: 0;
-  padding-right: 0;
-  background-color: black;
-  padding-left: 0;
+#casos-div .carousel-indicators {
+  margin-bottom: -2.5rem;
 }
 
-.bg-black img {
-  background-image: cover;
-  width: 100%;
-  max-height: 500px;
+#casos-div .carousel-indicators li {
+  background: black;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  border: 5px;
 }
 
-/* REGIAO
+#casos-div .carousel-indicators .active {
+  background: white;
+}
+
+.casos-div-img img {
+  width: 100%;
+}
+
+/* REGIAO CAROUSEL
   -------------------------------------------------- */
-#regiao {
+
+#regiaoCarousel {
   margin-bottom: 5rem;
 }
 
-#regiao h2 {
+#regiaoCarousel h2 {
   display: flex;
   justify-content: center;
   text-transform: uppercase;
@@ -238,43 +268,64 @@ header .btn-icone {
   padding-bottom: 2rem;
 }
 
-#regiao .carousel-item {
+#regiaoCarousel .carousel-item {
   height: 15rem;
 }
 
-#regiao .carousel-indicators li {
+#regiaoCarousel .carousel-indicators li {
   background: black;
-  border-radius: 100%;
+  border-radius: 50%;
   width: 15px;
   height: 15px;
   border: 5px;
 }
 
-#regiao .carousel-indicators .active {
+#regiaoCarousel .carousel-indicators .active {
   background: #FECC29;
 }
 
-.img-regiao {
+#regiaoCarousel .img-regiao {
   border-radius: 20px;
+  max-width: 100%;
 }
 
-/* BLOG 
+/* BLOG-DIV
   -------------------------------------------------- */
-#blog h2 {
+
+#blog-div {
+  padding-top: 5rem;
+  padding-bottom: 8rem;
+  background-color: #F3F3F3;
+}
+
+#blog-div span {
+  font-size: 0.8rem;
+  line-height: 2rem;
+}
+
+#blog-div h2 {
   justify-content: center;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 900;
 }
 
-#blog {
-  padding-top: 5rem;
-  padding-bottom: 4rem;
-  background-color: #F3F3F3;
+#blog-div p {
+  line-height: 1.7rem;
+}
+
+#blog-div .blog-saibaMais {
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-left: 6px dashed black;
+  padding-left: 0.5rem;
+  margin-top: 1.5rem;
 }
 
 /* NEWSLETTER
   -------------------------------------------------- */
+
 #newsletter {
   background: #4C4C4C;
   color: white;
@@ -350,10 +401,12 @@ header .btn-icone {
 
 /* FOOTER 
   -------------------------------------------------- */
+
 footer {
-  background-color: black;
-  widows: 100%;
-  height: 500px;
+  background-color: #161616;
+  width: 100%;
+  padding-top: 7rem;
+  line-height: 1.7rem;
 }
 
 footer img {
@@ -365,7 +418,7 @@ footer img {
 footer h4 {
   color: white;
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
 }
 
@@ -381,29 +434,33 @@ footer .btn span {
   color: black !important;
 }
 
-.fa-envelope {
+.fab {
   background-color: #FECC29;
+}
+
+.creditos {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  font-size: 0.7rem;
+}
+
+.creditos a {
+  color: #FECC29;
 }
 
 /* xxxxxxxxxxxxxx REGIAO xxxxxxxxxxxxxx
 ----------------------------------------*/
-body {
-  margin-top: 13rem;
-  padding-bottom: 0rem;
-  color: black;
-  background-color: white;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-}
 
 /* REGIOES
   -------------------------------------------------- */
+
 #regioes {
   background-color: #E7E7E7;
   width: 100%;
   height: 200px;
 }
 
-#regioes .container{
+#regioes .container {
   padding-top: 3rem;
 }
 
@@ -424,7 +481,7 @@ body {
   padding-right: 2rem;
 }
 
-.regiao-seta img {
+.regioes-seta img {
   position: absolute;
   right: 50%;
   top: 377px;
@@ -434,6 +491,7 @@ body {
 
 /* CIDADES
   -------------------------------------------------- */
+
 #cidades {
   margin-top: 5rem;
 }
@@ -453,6 +511,10 @@ body {
   border-radius: 20px;
 }
 
+#cidades .carousel-indicators {
+  margin-bottom: -2rem;
+}
+
 #cidades .carousel-indicators li {
   background: black;
   border-radius: 100%;
@@ -467,14 +529,14 @@ body {
 
 /* DESTAQUES
   -------------------------------------------------- */
+
 #destaques {
   margin-top: 5rem;
   line-height: 1.7rem;
 }
 
-#destaques .bg-yellow{
+#destaques .bg-yellow {
   border-radius: 20px;
-/*   margin-left: 15px !important; */
   padding-top: 4rem;
   padding-bottom: 4rem;
   padding-left: 5rem;
@@ -488,11 +550,6 @@ body {
   text-transform: uppercase;
 }
 
-#destaques img {
-  display: inline-block;
-  vertical-align: middle;
-}
-
 #destaques .icon_title h2 {
   display: inline-block;
   vertical-align: middle;
@@ -500,8 +557,13 @@ body {
   margin-left: 1rem;
 }
 
+#destaques img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .icon_destaques {
-  margin:auto;
+  margin: auto;
 }
 
 #destaques .text_destaques {
@@ -516,22 +578,271 @@ body {
 /* LOCALIZAÇÃO
   -------------------------------------------------- */
 
-#localização h2 {
+#localizacao .container {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 6rem;
+  margin-bottom: 7rem;
+}
+
+#localizacao h2 {
   text-transform: uppercase;
   font-weight: 900;
+  font-size: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#localizacao iframe {
+  border-radius: 20px;
 }
 
 /* ATENDIMENTO
   -------------------------------------------------- */
+
 #atendimento {
   background-color: #1598BD;
+  color: white;
   height: 320px;
   width: 100%;
+  line-height: 1.5rem;
 }
 
-.atendimento-seta img {
+#atendimento .container {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 7rem;
+}
+
+#atendimento h2 {
+  font-size: 1.7rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+}
+
+#atendimento .seta img {
   position: absolute;
   right: 50%;
   -webkit-transform: translate(50%);
   transform: translate(50%);
 }
+
+#atendimento a {
+  margin-left: 2rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: black;
+  background-color: #F3F3F3;
+  border-color: #F3F3F3;
+}
+
+/* xxxxxxxxxxxxxx QUEM SOMOS xxxxxxxxxxxxxx
+--------------------------------------------*/
+
+/* SOBRE
+  -------------------------------------------------- */
+
+#sobre h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+#sobre p {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+#sobre img {
+  border-radius: 20px;
+}
+
+/* CAROUSEL SOBRE
+  -------------------------------------------------- */
+
+#carouselSobre img {
+  border-radius: 20px;
+}
+
+#carouselSobre .container {
+  padding-left: 0;
+}
+
+#carouselSobre .carousel-indicators {
+  margin-bottom: -2.5rem;
+}
+
+#carouselSobre .carousel-indicators li {
+  background: black;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  border: 5px;
+}
+
+/* VALORES
+  -------------------------------------------------- */
+
+#valores {
+  padding-top: 4rem;
+  margin-top: 5rem;
+  padding-bottom: 4rem;
+  background-color: #F3F3F3;
+  text-align: justify;
+}
+
+#valores h3 {
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+/* como-funciona-div-sobre
+  -------------------------------------------------- */
+
+#como-funciona-div-sobre {
+  background: #F1CB3F;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+#como-funciona-div-sobre a {
+  background-color: black;
+  color: white;
+  border: 10px solid black;
+  margin-top: 0 !important;
+}
+
+#como-funciona-div-sobre span {
+  color: black !important;
+}
+
+/* xxxxxxxxxxxxxx COMO FUNCIONA xxxxxxxxxxxxxx
+----------------------------------------------*/
+
+/* ETAPAS
+  -------------------------------------------------- */
+
+section.como-funciona {
+  background: #f8faff;
+  padding: 0px 0 60px;
+}
+
+@media screen and (max-width: 768px) {
+  section.como-funciona {
+    padding: 0px 0 40px;
+  }
+}
+
+section.como-funciona h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  section.como-funciona h1 {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.como-funciona h1:before {
+    left: 40%;
+    top: -70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.como-funciona .text-cf-margin {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section.como-funciona img {
+    margin-bottom: 20px;
+  }
+}
+
+section.como-funciona .text-cf {
+  position: relative;
+  padding-left: 85px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  section.como-funciona .text-cf {
+    margin-bottom: 20px;
+  }
+}
+
+section.como-funciona .text-cf label {
+  font-size: 1.7rem;
+  font-weight: 900;
+  background: black;
+  border-radius: 50%;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  color: white;
+}
+
+section.como-funciona p {
+  font-weight: 500;
+}
+
+section.como-funciona img {
+  max-width: 80px;
+  margin-left: -5.6rem;
+  margin-bottom: -0.5rem;
+}
+
+/* xxxxxxxxxxxxxx CASOS DE SUCESSO xxxxxxxxxxxxxx
+----------------------------------------------------*/
+
+/* CASOS
+  -------------------------------------------------- */
+#casos-title .center{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.center h1{
+font-weight: 900;
+}
+
+.center img {
+  left: auto;
+}
+
+#casos img {
+  border-radius: 20px;
+}
+
+#casos a {
+  font-size: 1rem;
+  padding: auto;
+}
+
+#casos a:hover {
+  transform: scale(1) !important;
+  cursor: default;
+}
+
+#casos .btn {
+  background-color: black;
+  color: white;
+  font-weight: 400;
+  text-transform: none;
+  border: 5px solid black;
+  float: right;
+}
+
+
