@@ -10,7 +10,7 @@
 					<span>Precisamos conhecer um pouco mais sobre voçê e entender melhor sua característica para buscar o melhor imóvel que atenda suas necessidades.</span>
 				</div>
 				<div class="col-6 align-self-end">
-					<a class="btn"><img class="mr-3" src="assets\image\icon-atendimento.png">Começar atendimento</a>
+					<a href="buscar-lar.php" class="btn"><img class="mr-3" src="assets\image\icon-atendimento.png">Começar atendimento</a>
 				</div>
 			</div>
 	</section>

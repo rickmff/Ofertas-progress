@@ -14,11 +14,25 @@
   <? include('includes/navbar.php'); ?>
 
   <!-- ____________________ BLOG ____________________-->
-  <? include('includes/blog-div.php'); ?>
-  
+  <section id="blog-div">
+    <div class="container">
+      <div class="row col-12 mb-xs-3 mb-md-5">
+        <div class="col-7 w-100 m-auto pb-5">
+          <h1>Últimas publicações do blog</h1>
+        </div>
+      </div>
+      <div class="row col-12 pr-0">
+        <? include('includes/blog-div.php'); ?>
+        <? include('includes/blog-div.php'); ?>
+        <? include('includes/blog-div.php'); ?>
+      </div>
+  </section>
+
+   <!-- ____________________ Newsletter ____________________-->
+   <? include('includes\newsletter.php'); ?>
+
   <!-- ____________________ FOOTER ____________________-->
   <? include('includes/footer.php'); ?>
-
 
   <!-- JavaScript -->
   <? include('includesConfig/js.php'); ?>

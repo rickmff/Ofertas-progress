@@ -18,7 +18,7 @@
     <div class="container my-5">
       <div class="row">
         <div class="col-md-12 text-left mb-2">
-          <h1>Nossa História</h1>
+          <h1>TITTLE LOREM IPSUM SIT DEPSCUR ES</h1>
           <hr>
         </div>
         <div class="col-md-6">
@@ -35,10 +35,74 @@
       </div>
   </section>
 
-  
+  <section id="blogCarousel">
+
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-6">
+          <div id="carouselBlog" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselBlog" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselBlog" data-slide-to="1"></li>
+              <li data-target="#carouselBlog" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="#">
+                      <img src="http://placehold.it/250x250" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="#">
+                      <img src="http://placehold.it/250x250" alt="Image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="#">
+                      <img src="http://placehold.it/250x250" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="#">
+                      <img src="http://placehold.it/250x250" alt="Image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-md-6">
+                    <a href="#">
+                      <img src="http://placehold.it/250x250" alt="Image">
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href="#">
+                      <img src="http://placehold.it/250x250" alt="Image">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="text-center mt-5">
+            <a class="btn" href="buscar-lar-detalhe.php">Empreendimento X</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ____________________ FOOTER ____________________-->
   <? include('includes/footer.php'); ?>
-
 
   <!-- JavaScript -->
   <? include('includesConfig/js.php'); ?>

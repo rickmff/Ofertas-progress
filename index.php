@@ -19,8 +19,8 @@
   <!-- ____________________ COMO FUNCIONA ____________________-->
   <? include('includes\como-funciona-div.php'); ?>
 
-  <!-- ____________________ DEPOIMENTOS ____________________-->
-  <section id="depoimentos">
+  <!-- ____________________ CASOS DIV ____________________-->
+  <section id="casos-div">
     <div class="bg-yellow">
       <div class="container">
         <div class="row">
@@ -72,24 +72,9 @@
         </div>
       </div>
       <div class="row col-12 pr-0">
-        <div class="col-md-4">
-          <span>24/05/2019</span>
-          <h3>Tittle lorem ipsum sit depscur es</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam.</p>
-          <div class="blog-saibaMais">Saiba mais</div>
-        </div>
-        <div class="col-md-4">
-          <span>24/05/2019</span>
-          <h3>Tittle lorem ipsum sit depscur es</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam.</p>
-          <div class="blog-saibaMais">Saiba mais</div>
-        </div>
-        <div class="col-md-4">
-          <span>24/05/2019</span>
-          <h3>Tittle lorem ipsum sit depscur es</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis praesentium ut tenetur modi unde similique laudantium debitis sed, ea quo magnam ullam.</p>
-          <div class="blog-saibaMais">Saiba mais</div>
-        </div>
+        <? include('includes\blog-div.php');?>
+        <? include('includes\blog-div.php');?>
+        <? include('includes\blog-div.php');?>
       </div>
     </div>
   </section>

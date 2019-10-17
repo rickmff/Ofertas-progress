@@ -30,7 +30,7 @@
     <img src="assets\image\icon-aspas.png" alt="Icone de aspas - Depoimento">
   </div>
   <section id="casos">
-    <div class="container">
+    <div class="container mb-5">
       <div class="row">
         <div class="col-6 my-5">
           <? include('includes\depoimento.php'); ?>
@@ -49,7 +49,9 @@
       </div>
     </div>
   </section>
-
+  
+  <!-- ____________________ ATENDIMENTO ____________________-->
+  <? include('includes/atendimento.php'); ?>
 
   <!-- ____________________ FOOTER ____________________-->
   <? include('includes/footer.php'); ?>
