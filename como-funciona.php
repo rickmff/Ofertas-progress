@@ -13,14 +13,22 @@
   <!-- ____________________ NAVBAR ____________________-->
   <? include('includes/navbar.php'); ?>
 
+  <section id="header-title">
+		<div class="container">
+			<span><a href="#">Home</a> / Como funciona</span>
+			<div class="d-flex w-100 justify-content-center">
+				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+				<h1>Como funciona ?</h1>
+			</div>
+			<div class="header-title-seta">
+				<img class="img-fluid" src="assets\image\seta.png" alt="">
+			</div>
+		</div>
+	</section>
+
   <!-- ____________________ COMO FUNCIONA ____________________-->
   <section class="como-funciona">
-    <div class="bg-gray py-5 mb-5">
-      <div class="col-md-12 text-center">
-        <h1>Como funciona</h1>
-      </div>
-      </div>
-      <div class="container">
+      <div class="container mt-5">
         <div class="col-md-12">
           <div class="row">
             <div class="col-md-4">

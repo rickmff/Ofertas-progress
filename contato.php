@@ -143,16 +143,23 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 		}
 	</script>
 
+	<section id="header-title">
+		<div class="container">
+			<span><a href="#">Home</a> / Contato</span>
+			<div class="d-flex w-100 justify-content-center">
+				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+				<h1>Contato</h1>
+			</div>
+			<div class="header-title-seta">
+				<img class="img-fluid" src="assets\image\seta.png" alt="">
+			</div>
+		</div>
+	</section>
+
 	<section id="contato">
 		<div class="page fale-conosco">
 			<!--Elemento de formatação-->
-
-			<div class="col-md-12 bg-gray py-5 mb-5">
-				<div class="text-center">
-					<h1>Fale conosco</h1>
-				</div>
-			</div>
-			<div class="container">
+			<div class="container mt-5 pt-5">
 				<div class="row">
 					<div class="col-md-6">
 						<form class="formulario" name="formulario" id="formulario" action="" method="post" onSubmit="return validaForm()">
@@ -186,35 +193,35 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 									<input required type="text" name="cidade" id="cidade" class="form-control"> -->
 
 									<select required="" class="form-control" name="estado" id="estado">
-                                            <option value="" disabled="" selected=""><label>UF</label></option>
-                                            <option value="AC">AC</option>
-                                            <option value="AL">AL</option>
-                                            <option value="AP">AP</option>
-                                            <option value="AM">AM</option>
-                                            <option value="BA">BA</option>
-                                            <option value="CE">CE</option>
-                                            <option value="DF">DF</option>
-                                            <option value="ES">ES</option>
-                                            <option value="GO">GO</option>
-                                            <option value="MA">MA</option>
-                                            <option value="MS">MS</option>
-                                            <option value="MT">MT</option>
-                                            <option value="MG">MG</option>
-                                            <option value="PA">PA</option>
-                                            <option value="PB">PB</option>
-                                            <option value="PR">PR</option>
-                                            <option value="PE">PE</option>
-                                            <option value="PI">PI</option>
-                                            <option value="RJ">RJ</option>
-                                            <option value="RN">RN</option>
-                                            <option value="RS">RS</option>
-                                            <option value="RO">RO</option>
-                                            <option value="RR">RR</option>
-                                            <option value="SC">SC</option>
-                                            <option value="SP">SP</option>
-                                            <option value="SE">SE</option>
-                                            <option value="TO">TO</option>
-                                        </select>							
+										<option value="" disabled="" selected=""><label>UF</label></option>
+										<option value="AC">AC</option>
+										<option value="AL">AL</option>
+										<option value="AP">AP</option>
+										<option value="AM">AM</option>
+										<option value="BA">BA</option>
+										<option value="CE">CE</option>
+										<option value="DF">DF</option>
+										<option value="ES">ES</option>
+										<option value="GO">GO</option>
+										<option value="MA">MA</option>
+										<option value="MS">MS</option>
+										<option value="MT">MT</option>
+										<option value="MG">MG</option>
+										<option value="PA">PA</option>
+										<option value="PB">PB</option>
+										<option value="PR">PR</option>
+										<option value="PE">PE</option>
+										<option value="PI">PI</option>
+										<option value="RJ">RJ</option>
+										<option value="RN">RN</option>
+										<option value="RS">RS</option>
+										<option value="RO">RO</option>
+										<option value="RR">RR</option>
+										<option value="SC">SC</option>
+										<option value="SP">SP</option>
+										<option value="SE">SE</option>
+										<option value="TO">TO</option>
+									</select>
 								</div>
 								<div class="form-group col-md-12">
 

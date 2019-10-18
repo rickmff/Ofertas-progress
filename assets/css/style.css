@@ -78,6 +78,10 @@ body {
   padding-top: 6rem;
 }
 
+.top-0 {
+  top: 0px !important;
+}
+
 /* HEADER
   -------------------------------------------------- */
 
@@ -104,6 +108,7 @@ header .nav-link {
   text-transform: uppercase;
   font-weight: 800;
   color: black !important;
+  cursor: pointer;
 }
 
 header .dropdown-toggle::after {
@@ -119,6 +124,15 @@ header .btn-icone {
   width: 1.5em;
   margin-right: 0.75rem;
   margin-bottom: 0.25em;
+}
+
+.dropdown-item {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:active {
+  background-color: white;
 }
 
 /* xxxxxxxxxxxxxx INDEX xxxxxxxxxxxxxx
@@ -196,6 +210,7 @@ header .btn-icone {
   width: auto;
   margin-left: 0;
   padding-left: 0;
+  overflow-x: hidden;
 }
 
 #casos-div .title-section h2 {
@@ -249,10 +264,6 @@ header .btn-icone {
 
 #casos-div .carousel-indicators .active {
   background: white;
-}
-
-.casos-div-img img {
-  width: 100%;
 }
 
 /* REGIAO CAROUSEL
@@ -473,29 +484,39 @@ footer .btn span {
 /* xxxxxxxxxxxxxx REGIAO xxxxxxxxxxxxxx
 ----------------------------------------*/
 
-/* REGIOES
+/* header-title
   -------------------------------------------------- */
 
-#regioes {
+#header-title {
   background-color: #E7E7E7;
   width: 100%;
   height: 200px;
 }
 
-#regioes .container {
+#header-title .container {
   padding-top: 3rem;
 }
 
-#regioes span {
+#header-title a {
+  font-weight: 600;
+  color: black;
+}
+
+#header-title a:hover {
+  text-decoration: none;
+  color: #FFCC29;
+}
+
+#header-title span {
   font-size: 0.75rem;
 }
 
-#regioes .icone-regiao {
+#header-title .icone-regiao {
   width: 2.7rem;
   height: 2.7rem;
 }
 
-#regioes h1 {
+#header-title h1 {
   color: black;
   text-transform: uppercase;
   font-weight: 900;
@@ -503,10 +524,10 @@ footer .btn span {
   padding-right: 2rem;
 }
 
-.regioes-seta img {
+.header-title-seta img {
   position: absolute;
   right: 50%;
-  top: 377px;
+  top: 362px;
   -webkit-transform: translate(50%);
   transform: translate(50%);
 }
@@ -645,6 +666,7 @@ footer .btn span {
 #atendimento .seta img {
   position: absolute;
   right: 50%;
+  margin-top: -30px;
   -webkit-transform: translate(50%);
   transform: translate(50%);
 }
@@ -666,7 +688,7 @@ footer .btn span {
 
 #sobre h1 {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 900;
   font-size: 2rem;
 }
 
@@ -760,6 +782,7 @@ section.como-funciona h1 {
   text-transform: uppercase;
   font-weight: 900;
   position: relative;
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -831,15 +854,15 @@ section.como-funciona img {
 /* CASOS
   -------------------------------------------------- */
 
-#casos-title .center {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: center;
-  text-transform: uppercase;
+.center {
+  display: flex;
+  justify-content: center;
 }
 
 .center h1 {
   font-weight: 900;
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .center img {
@@ -902,9 +925,20 @@ section.como-funciona img {
 /* TITLE CONTATO
   -------------------------------------------------- */
 
-.fale-conosco h1 {
-  font-weight: 800;
+#contato h1 {
+  font-weight: 900;
   text-transform: uppercase;
+  font-size: 2rem;
+}
+
+#contato .btn {
+  background-color: black;
+  border-color: black;
+  color: #FFCC29;
+}
+
+#contato .btn:hover {
+  transform: scale(1.05);
 }
 
 #contato .form-group {
@@ -994,18 +1028,20 @@ section.como-funciona img {
 /* ENCONTRE MEU LAR
   -------------------------------------------------- */
 
-  #dados {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-  #localizacao {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
-  #caracteristicas {
-    padding-left: 10rem;
-    padding-right: 10rem;
-  }
+#dados {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+#localizacao {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+#caracteristicas {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
 
 #header-form {
   background-color: black;
@@ -1020,7 +1056,7 @@ section.como-funciona img {
   border-bottom: 5px solid white;
 }
 
-#header-form .active h2{
+#header-form .active h2 {
   transition: 0.5s;
   color: #FECC29;
   padding-bottom: 1rem;
@@ -1028,7 +1064,7 @@ section.como-funciona img {
 }
 
 #buscar-lar h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -1120,4 +1156,3 @@ section.como-funciona img {
   color: white;
   letter-spacing: 2px;
 }
-

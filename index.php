@@ -17,7 +17,7 @@
   <? include('includes/banner.php'); ?>
 
   <!-- ____________________ COMO FUNCIONA ____________________-->
-  <? include('includes\como-funciona-div.php'); ?>
+  <? include('includes/como-funciona-div.php'); ?>
 
   <!-- ____________________ CASOS DIV ____________________-->
   <section id="casos-div">
@@ -72,15 +72,15 @@
         </div>
       </div>
       <div class="row col-12 pr-0">
-        <? include('includes\blog-div.php');?>
-        <? include('includes\blog-div.php');?>
-        <? include('includes\blog-div.php');?>
+        <? include('includes/blog-div.php');?>
+        <? include('includes/blog-div.php');?>
+        <? include('includes/blog-div.php');?>
       </div>
     </div>
   </section>
 
   <!-- ____________________ Newsletter ____________________-->
-  <? include('includes\newsletter.php'); ?>
+  <? include('includes/newsletter.php'); ?>
 
   <!-- ____________________ FOOTER ____________________-->
   <? include('includes/footer.php'); ?>

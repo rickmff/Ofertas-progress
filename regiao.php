@@ -24,15 +24,15 @@ require 'cms/classes/functions.php';
 	<!-- ____________________ NAVBAR ____________________-->
 	<? include('includes/navbar.php'); ?>
 
-	<!-- ____________________ REGIOES ____________________-->
-	<section id="regioes">
+	<!-- ____________________ header-title ____________________-->
+	<section id="header-title">
 		<div class="container">
 			<span>Home / Regiões</span>
 			<div class="d-flex w-100 justify-content-center">
 				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
 				<h1>Regiões</h1>
 			</div>
-			<div class="regioes-seta">
+			<div class="header-title-seta">
 				<img class="img-fluid" src="assets\image\seta.png" alt="">
 			</div>
 		</div>

@@ -4,11 +4,11 @@
         <h2><img class="icone-regiao img-fluid mr-2" src="assets\image\icon-regiao.png" />Região</h2>
       </div>
 
-      <div id="regiaoCarousel" class="carousel slide" data-ride="carousel">
+      <div id="Carouselregiao" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#regiaoCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#regiaoCarousel" data-slide-to="1"></li>
-          <li data-target="#regiaoCarousel" data-slide-to="2"></li>
+          <li data-target="#Carouselregiao" data-slide-to="0" class="active"></li>
+          <li data-target="#Carouselregiao" data-slide-to="1"></li>
+          <li data-target="#Carouselregiao" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
 

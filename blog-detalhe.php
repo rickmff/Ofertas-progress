@@ -13,14 +13,23 @@
   <!-- ____________________ NAVBAR ____________________-->
   <? include('includes/navbar.php'); ?>
 
+  <section id="header-title">
+    <div class="container">
+      <span><a href="#">Home</a> /<a href="blog.php"> Blog </a>/</span>
+      <div class="d-flex w-100 justify-content-center">
+        <img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+        <h1>Title blog</h1>
+      </div>
+      <div class="header-title-seta">
+        <img class="img-fluid" src="assets\image\seta.png" alt="">
+      </div>
+    </div>
+  </section>
+
   <!-- ____________________ BLOG DETALHE ____________________-->
   <section id="sobre">
-    <div class="container my-5">
+    <div class="container my-5 pt-3">
       <div class="row">
-        <div class="col-md-12 text-left mb-2">
-          <h1>TITTLE LOREM IPSUM SIT DEPSCUR ES</h1>
-          <hr>
-        </div>
         <div class="col-md-6">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quidem illo consectetur eius at, ad eveniet nemo adipisci cum possimus quasi voluptatem hic, magni quis voluptatum ipsam impedit error corrupti!
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis consequatur error nam iste, illum provident eos dolorum enim expedita. Odit tempore unde reiciendis quibusdam aperiam, iure quis doloremque nostrum quod!
@@ -33,10 +42,10 @@
           <img src="https://via.placeholder.com/500x500" alt="">
         </div>
       </div>
+    </div>
   </section>
 
   <section id="blogCarousel">
-
     <div class="container my-5">
       <div class="row">
         <div class="col-6">
@@ -93,8 +102,14 @@
           </div>
         </div>
         <div class="col-6">
-          <div class="text-center mt-5">
-            <a class="btn" href="buscar-lar-detalhe.php">Empreendimento X</a>
+          <div class="row col-12">
+            <div class="col-4 pl-0">
+              <img class="avatar" src="http://placehold.it/150x150" alt="">
+            </div>
+            <div class="col-8 pr-0">
+              <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa cum facere cupiditate in, dolore, nulla aliquam non dolores  in, dolore, nulla aliquam non dolores nulla aliquam </p>
+              <a class="btn w-100" href="regiao.php">Regiao X</a>
+            </div>
           </div>
         </div>
       </div>

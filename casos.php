@@ -14,37 +14,39 @@
   <? include('includes/navbar.php'); ?>
 
   <!-- ____________________ CASOS ____________________-->
-  <section id="casos-title">
-    <div class="bg-gray">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 center">
-            <h1>Casos de sucesso</h1>
-            <p>Home / Casos de sucesso</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <section id="header-title">
+		<div class="container">
+			<span><a href="#">Home</a> / Casos de sucesso</span>
+			<div class="d-flex w-100 justify-content-center">
+				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+				<h1>Casos de sucesso</h1>
+			</div>
+			<div class="header-title-seta">
+				<img class="img-fluid" src="assets\image\seta.png" alt="Seta logo ofertas">
+			</div>
+		</div>
   </section>
+  
   <div class="my-5 center">
     <img src="assets\image\icon-aspas.png" alt="Icone de aspas - Depoimento">
   </div>
+
   <section id="casos">
     <div class="container mb-5">
       <div class="row">
         <div class="col-6 my-5">
-          <? include('includes\depoimento.php'); ?>
+          <? include('includes/depoimento.php'); ?>
         </div>
         <div class="col-6 my-5">
-          <? include('includes\depoimento.php'); ?>
+          <? include('includes/depoimento.php'); ?>
         </div>
       </div>
       <div class="row">
         <div class="col-6 my-5">
-          <? include('includes\depoimento.php'); ?>
+          <? include('includes/depoimento.php'); ?>
         </div>
         <div class="col-6 my-5">
-          <? include('includes\depoimento.php'); ?>
+          <? include('includes/depoimento.php'); ?>
         </div>
       </div>
     </div>

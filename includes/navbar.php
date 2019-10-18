@@ -20,7 +20,7 @@
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="quem-somos.php">Sobre</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="como-funciona.php">Como funciona</a>
+                <a class="dropdown-item" href="como-funciona.php">Como funciona ?</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="casos.php">Casos de sucesso</a>
               </div>
@@ -36,8 +36,8 @@
             </li>
           </ul>
 
-          <a href="buscar-lar.php" class="btn">
-            <img class="btn-icone" src="assets\image\btn-icon-chave.png" alt=""><span>Encontre meu novo lar</span>
+          <a href="encontrar-lar.php" class="btn">
+            <img class="btn-icone" src="assets\image\btn-icon-chave.png" alt="icon-chave"><span>Encontre meu novo lar</span>
           </a>
 
         </div>

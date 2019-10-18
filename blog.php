@@ -13,14 +13,22 @@
   <!-- ____________________ NAVBAR ____________________-->
   <? include('includes/navbar.php'); ?>
 
+  <section id="header-title">
+		<div class="container">
+			<span><a href="#">Home</a> / Blog</a></span>
+			<div class="d-flex w-100 justify-content-center">
+				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+				<h1>Blog</h1>
+			</div>
+			<div class="header-title-seta">
+				<img class="img-fluid" src="assets\image\seta.png" alt="">
+			</div>
+		</div>
+	</section>
+
   <!-- ____________________ BLOG ____________________-->
   <section id="blog-div">
     <div class="container">
-      <div class="row col-12 mb-xs-3 mb-md-5">
-        <div class="col-7 w-100 m-auto pb-5">
-          <h1>Últimas publicações do blog</h1>
-        </div>
-      </div>
       <div class="row col-12 pr-0">
         <? include('includes/blog-div.php'); ?>
         <? include('includes/blog-div.php'); ?>
@@ -29,7 +37,7 @@
   </section>
 
    <!-- ____________________ Newsletter ____________________-->
-   <? include('includes\newsletter.php'); ?>
+   <? include('includes/newsletter.php'); ?>
 
   <!-- ____________________ FOOTER ____________________-->
   <? include('includes/footer.php'); ?>
