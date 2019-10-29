@@ -2,7 +2,7 @@
 <header>
     <nav id="menu" class="navbar navbar-expand-sm navbar-light fixed-top bg-light expand">
       <div class="container">
-        <a class="navbar-brand" href="#"> <img class="img-fluid" src="assets\image\logo-navbar.png" alt=""></a>
+        <a class="navbar-brand" href="home"> <img class="img-fluid" src="assets/image/logo-navbar.png" alt="logo ofertas imobiliarias"></a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
           aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,26 +18,26 @@
                 Quem somos
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="quem-somos.php">Sobre</a>
+                <a class="dropdown-item" href="sobre">Sobre</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="como-funciona.php">Como funciona ?</a>
+                <a class="dropdown-item" href="como-funciona">Como funciona</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="casos.php">Casos de sucesso</a>
+                <a class="dropdown-item" href="casos-de-sucesso">Casos de sucesso</a>
               </div>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="regiao.php">Região</a>
+              <a class="nav-link" href="regioes">Regiões</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="blog.php">Blog</a>
+              <a class="nav-link" href="blog">Blog</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="contato.php">Contato</a>
+              <a class="nav-link" href="contato">Contato</a>
             </li>
           </ul>
 
-          <a href="encontrar-lar.php" class="btn">
-            <img class="btn-icone" src="assets\image\btn-icon-chave.png" alt="icon-chave"><span>Encontre meu novo lar</span>
+          <a href="encontre-meu-novo-lar" class="btn">
+            <img class="btn-icone" src="assets/image/btn-icon-chave.png" alt="icone chave encontre meu lar"><span>Encontre meu novo lar</span>
           </a>
 
         </div>

@@ -15,13 +15,13 @@
 
   <section id="header-title">
 		<div class="container">
-			<span><a href="#">Home</a> / Sobre</span>
-			<div class="d-flex w-100 justify-content-center">
-				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+			<span><a href="home">Home</a> / Sobre</span>
+			<div class="d-flex w-100 justify-content-center py-3">
+				<img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" alt="icone-regiao"/>
 				<h1>Nossa História</h1>
 			</div>
 			<div class="header-title-seta">
-				<img class="img-fluid" src="assets\image\seta.png" alt="">
+				<img class="img-fluid" src="assets/image/seta.png" alt="seta">
 			</div>
 		</div>
 	</section>
@@ -30,7 +30,7 @@
   <section id="sobre">
     <div class="container my-5">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-xs-12 col-md-6">
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quidem illo consectetur eius at, ad eveniet nemo adipisci cum possimus quasi voluptatem hic, magni quis voluptatum ipsam impedit error corrupti!
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis consequatur error nam iste, illum provident eos dolorum enim expedita. Odit tempore unde reiciendis quibusdam aperiam, iure quis doloremque nostrum quod!
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quidem illo consectetur eius at, ad eveniet nemo adipisci cum possimus quasi voluptatem hic, magni quis voluptatum ipsam impedit error corrupti!
@@ -38,14 +38,14 @@
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam quidem illo consectetur eius at, ad eveniet nemo adipisci cum possimus quasi voluptatem hic, magni quis voluptatum ipsam impedit error corrupti!
           </p>
         </div>
-        <div class="col-md-6">
-          <img src="https://via.placeholder.com/500x500" alt="">
+        <div class="col-xs-12 col-md-6">
+          <img class="img-fluid" src="https://via.placeholder.com/500x500" alt="">
         </div>
       </div>
   </section>
 
   <!-- ____________________ SOBRE CAROUSEL ____________________-->
-  <section id="carouselSobre">
+  <section id="carouselSobre" class="hidden-mobile">
     <div class="container">
       <div class="col-12 my-5 pl-0">
         <div id="sobreCarousel" class="carousel slide" data-ride="carousel">

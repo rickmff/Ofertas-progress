@@ -1,61 +1,3 @@
-<?
-session_start();
-include 'cms/config/config.php';
-require 'cms/classes/class.conndatabase.php';
-require 'cms/classes/functions.php';
-
-include('cms/classes/phpmailer/class.phpmailer.php');
-
-if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
-	for ($i = 0; $i < count($_POST); $i++) {
-		$var = key($_POST);
-		$$var = trim($_POST[key($_POST)]);
-		next($_POST);
-	}
-
-	$destino = 'suporte@agenciakombi.com.br';
-
-	$body = "<style type=\"text/css\">
-		h2 { font:bold 14px Arial; }
-		p { font:12px Arial; }	
-		</style>
-		<h2>Contato enviado pelo site " . $config_nomeCliente . "</u></b></h2>
-		
-		<p>
-		<b>Nome: </b>" . $_POST['nome'] . "<br />
-		<b>E-mail: </b><a href=\"mailto:" . $_POST['email'] . "\">" . $_POST['email'] . "</a><br />
-		<b>Telefone: </b>" . $_POST['telefone'] . "<br />
-		<b>Mensagem: </b>" . $_POST['mensagem'] . "<br />
-		</p>
-		<p><em>Este e-mail foi enviado em " . date('d/m/Y', time()) . " às " . date('H:i:s', time()) . ".</em></p>";
-
-	$mail = new PHPMailer();
-	$mail->IsSMTP();
-	if ($configSMTP_host != '' && $configSMTP_usuario != '' && $configSMTP_senha != '') {
-		$mail->Host = $configSMTP_host;
-		$mail->Username = $configSMTP_usuario;
-		$mail->Password = $configSMTP_senha;
-		$mail->SMTPAuth = true;
-		$mail->Port = 587;
-		$mail->Sender = $configSMTP_usuario; // Seu e-mail
-	} else {
-		$mail->SMTPAuth = false;
-	}
-	$mail->CharSet = "utf-8";
-	$mail->From = $_POST['email'];
-	$mail->AddReplyTo($_POST['email'], $_POST['nome']);
-	$mail->FromName = $_POST['nome'];
-	$mail->Body = $body;
-	$mail->Subject = "Contato enviado pelo site " . $config_nomeCliente;
-	$mail->IsHTML(true);
-	$mail->AddAddress($destino);
-	if ($mail->Send()) {
-		$sucesso = 's';
-		GravaMailing($_POST['email'], $_POST['nome'], $_POST['telefone'], '', 'FaleConosco', '', $_POST['mensagem']);
-	} else {
-		$sucesso = 'n';
-	}
-} ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -68,90 +10,20 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 	<? include('includesConfig/metas.php'); ?>
 
 	<? include('includesConfig/css.php'); ?>
-
-	<script src="js/formata_campo.js"></script>
 </head>
 
 <body>
-
-	<? if ($sucesso == 's') { ?>
-		<div class="overlay">
-			<div class="msg">
-				<span><?= $nome ?></span><br>
-				SUA MENSAGEM FOI ENVIADA COM SUCESSO!<br>
-				<span class="fechar">FECHAR</span>
-			</div>
-		</div>
-	<? }
-	if ($sucesso == 'n') { ?>
-		<div class="overlay">
-			<div class="msg">
-				OCORREU ALGUM ERRO NO ENVIO DA SUA MENSAGEM<br>
-				<?= $mail->ErrorInfo ?><br>
-				favor entrar em contato via telefone
-			</div>
-		</div>
-	<? } ?>
-
 	<? include('includes/navbar.php'); ?>
-
-	<script>
-		function validaForm() {
-
-			d = document.formulario;
-
-			//validar nome
-			if (d.nome.value == "") {
-				alert("O campo Nome deve ser preenchido!");
-				d.nome.focus();
-				return false;
-			}
-
-
-			//validar email
-			if (d.email.value == "") {
-				alert("O campo E-mail deve ser preenchido!");
-				d.email.focus();
-				return false;
-			} else {
-				var email = d.email.value;
-				var exclude = /[^@\-\.\w]|^[_@\.\-]|[\._\-]{2}|[@\.]{2}|(@)[^@]*\1/;
-				var check = /@[\w\-]+\./;
-				var checkend = /\.[a-zA-Z]{2,3}$/;
-				if (((email.search(exclude) != -1) || (email.search(check)) == -1) || (email.search(checkend) == -1)) {
-					alert("O campo E-mail deve ser um endereço válido!");
-					d.email.focus();
-					return false;
-				}
-
-			}
-
-			//validar telefone
-			if (d.telefone.value == "") {
-				alert("O campo Telefone deve ser preenchido!");
-				d.telefone.focus();
-				return false;
-			}
-
-			//validar mensagem
-			if (d.mensagem.value == "") {
-				alert("O campo Mensagem deve ser preenchido!");
-				d.mensagem.focus();
-				return false;
-			}
-
-		}
-	</script>
 
 	<section id="header-title">
 		<div class="container">
-			<span><a href="#">Home</a> / Contato</span>
-			<div class="d-flex w-100 justify-content-center">
-				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
+			<span><a href="home">Home</a> / Contato</span>
+			<div class="d-flex w-100 justify-content-center py-3">
+				<img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" alt="icone regiao"/>
 				<h1>Contato</h1>
 			</div>
 			<div class="header-title-seta">
-				<img class="img-fluid" src="assets\image\seta.png" alt="">
+				<img class="img-fluid" src="assets/image/seta.png" alt="seta">
 			</div>
 		</div>
 	</section>
@@ -162,29 +34,25 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 			<div class="container mt-5 pt-5">
 				<div class="row">
 					<div class="col-md-6">
-						<form class="formulario" name="formulario" id="formulario" action="" method="post" onSubmit="return validaForm()">
+						<form class="formulario" name="formulario" id="formulario" action="javascript:" method="post" onsubmit="enviaContato();">
 							<div class="row">
 								<div class="form-group col-md-6">
 									<input required type="text" name="nome" id="nome" class="form-control">
 									<label>Nome</label>
 								</div>
 								<div class="form-group col-md-6">
-
 									<input required type="email" name="email" id="email" class="form-control">
-									<label>E-Mail</label>
+									<label>E-mail</label>
 								</div>
 								<div class="form-group col-md-6">
-
 									<input required type="text" name="telefone" id="telefone" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
 									<label>Telefone</label>
 								</div>
 								<div class="form-group col-md-6">
-
-									<input required type="text" name="telefone" id="telefone" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
+									<input required type="text" name="celular" id="celular" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
 									<label>Celular</label>
 								</div>
 								<div class="form-group col-md-8">
-
 									<input required type="text" name="cidade" id="cidade" class="form-control">
 									<label>Cidade</label>
 								</div>
@@ -225,7 +93,7 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 								</div>
 								<div class="form-group col-md-12">
 
-									<input required type="text" name="cidade" id="cidade" class="form-control">
+									<input required type="text" name="assunto" id="assunto" class="form-control">
 									<label>Assunto</label>
 								</div>
 
@@ -253,10 +121,12 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 								<span class="fone">Tel: (15) 3033.8668</span>
 							</p>
 						</div>
-						<div class="col-md-12 text-right mt-3 pr-0">
+						<div class="col-md-12 text-right my-3 pr-0">
 							<button type="submit" class="btn">Traçar rota</button>
 						</div>
 					</div>
+
+          <div class="col-md-12" id="retorno_msg_contato"></div>
 				</div>
 			</div>
 
@@ -267,6 +137,107 @@ if ($_POST['nome'] && $_POST['email'] && $_POST['mensagem']) {
 	<? include('includes/footer.php'); ?>
 
 	<? include('includesConfig/js.php'); ?>
+
+  <script>
+    function validaForm() {
+
+      d = document.formulario;
+
+      //validar nome
+      if (d.nome.value == "") {
+        alert("O campo Nome deve ser preenchido!");
+        d.nome.focus();
+        return false;
+      }
+
+      //validar email
+      if (d.email.value == "") {
+        alert("O campo E-mail deve ser preenchido!");
+        d.email.focus();
+        return false;
+      } else {
+        var email = d.email.value;
+        var exclude = /[^@\-\.\w]|^[_@\.\-]|[\._\-]{2}|[@\.]{2}|(@)[^@]*\1/;
+        var check = /@[\w\-]+\./;
+        var checkend = /\.[a-zA-Z]{2,3}$/;
+        if (((email.search(exclude) != -1) || (email.search(check)) == -1) || (email.search(checkend) == -1)) {
+          alert("O campo E-mail deve ser um endereço válido!");
+          d.email.focus();
+          return false;
+        }
+      }
+
+      //validar telefone
+      if (d.telefone.value == "") {
+        alert("O campo Telefone deve ser preenchido!");
+        d.telefone.focus();
+        return false;
+      }
+
+      //validar celular
+      if (d.celular.value == "") {
+        alert("O campo Celular deve ser preenchido!");
+        d.celular.focus();
+        return false;
+      }
+
+      //validar cidade
+      if (d.cidade.value == "") {
+        alert("O campo Cidade deve ser preenchido!");
+        d.cidade.focus();
+        return false;
+      }
+
+      //validar estado
+      if (d.estado.value == "") {
+        alert("O campo Estado deve ser preenchido!");
+        d.estado.focus();
+        return false;
+      }
+
+      //validar mensagem
+      if (d.mensagem.value == "") {
+        alert("O campo Mensagem deve ser preenchido!");
+        d.mensagem.focus();
+        return false;
+      }
+
+      return true;
+    }
+
+    function enviaContato(){
+        form_valido = validaForm();
+
+        if(form_valido){
+            var formdata = new FormData($("#formulario")[0]);
+            var linkAjax = "./ajax.php?act=sendContato";
+
+            $.ajax({
+                type: 'POST',
+                url: linkAjax,
+                data: formdata ,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                    console.log(data);
+                    data = $.parseJSON(data);
+                    if(!data.ErroEnvio){
+                        /*ga('send', 'event', 'envio-contato');*/
+                        var msg_retorno = data.nome+', sua mensagem foi enviada com sucesso! Retornaremos em breve.';
+                        $('#retorno_msg_contato').html('<div class="alert alert-success">'+msg_retorno+'</div>');
+                        $("#formulario input, #formulario textarea, #formulario select").val('');
+                        $('#formulario input[type=checkbox]').prop('checked', false);
+
+                    } else{
+                        var msg_retorno = 'Erro: '+data.ErroEnvio;
+                        $('#retorno_msg_contato').html('<div class="alert alert-warning">'+msg_retorno+'</div>');
+
+                    }
+                },
+            });
+        }
+    }
+  </script>
 
 	<script>
 		$(document).ready(function() {

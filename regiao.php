@@ -24,16 +24,38 @@ require 'cms/classes/functions.php';
 	<!-- ____________________ NAVBAR ____________________-->
 	<? include('includes/navbar.php'); ?>
 
+	<?
+
+	if (is_numeric($_GET['ref'])) {
+		$resRegiao = mysql_query("SELECT * FROM site_tb_regioes WHERE id_regiao = '" . $_GET['ref'] . "'");
+		if (mysql_num_rows($resRegiao)) {
+			$rowRegiao = mysql_fetch_array($resRegiao);
+
+			$resFotos = mysql_query("SELECT * FROM site_tb_regioes_fotos WHERE ref = '" . $rowRegiao['id_regiao'] . "' ORDER BY id_foto DESC");
+			$qtdFotos = mysql_num_rows($resFotos);
+
+			$count_hit = $rowRegiao['hit_regiao'];
+			$count_hit = $count_hit + 1;
+			mysql_query("UPDATE site_tb_regioes SET hit_regiao='" . $count_hit . "' WHERE id_regiao = '" . $rowRegiao['id_regiao'] . "'");
+		} else {
+			Redir('regioes/');
+		}
+	} else {
+		Redir('regioes/');
+	}
+
+	?>
+
 	<!-- ____________________ header-title ____________________-->
 	<section id="header-title">
 		<div class="container">
-			<span>Home / Regiões</span>
+			<span><a href="home">Home</a> / <a href="regioes">Regiões</a> / <?= $rowRegiao['nome_regiao'] ?></span>
 			<div class="d-flex w-100 justify-content-center">
-				<img class="icone-regiao img-fluid mr-3" src="assets\image\icon-regiao.png" />
-				<h1>Regiões</h1>
+				<img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" alt="icone regiao" />
+				<h1><?= $rowRegiao['nome_regiao'] ?></h1>
 			</div>
 			<div class="header-title-seta">
-				<img class="img-fluid" src="assets\image\seta.png" alt="">
+				<img class="img-fluid" src="assets/image/seta.png" alt="seta">
 			</div>
 		</div>
 	</section>
@@ -41,68 +63,54 @@ require 'cms/classes/functions.php';
 	<!-- ____________________ CIDADES ____________________-->
 	<section id="cidades">
 		<div class="container my-5 pl-0">
-			<h2>Região ipsum Amet sic</h2>
-			<h3>Nome da cidade</h3>
+			<h2><?= $rowRegiao['nome_regiao'] ?></h2>
+			<h3><?= $rowRegiao['cidade_uf'] ?></h3>
 			<div class="row mt-4">
 				<div class="col-6">
-					<img src="http://placehold.it/500x350" alt="">
+					<a class="zoom" href="uploads/regioes/<?= $rowRegiao['foto_regiao'] ?>">
+						<img src="uploads/regioes/thumb_<?= $rowRegiao['foto_regiao'] ?>" alt="<?= $rowRegiao['nome_regiao'] ?>">
+					</a>
 				</div>
-
-				<div class="col-6">
-					<div id="cidadesCarousel" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#cidadesCarousel" data-slide-to="0" class="active"></li>
-							<li data-target="#cidadesCarousel" data-slide-to="1"></li>
-							<li data-target="#cidadesCarousel" data-slide-to="2"></li>
-						</ol>
-						<div class="carousel-inner">
-
-							<div class="carousel-item active">
-								<div class="row">
+				<? if ($qtdFotos) {
+					$i = 0;
+					while ($rowFotos = mysql_fetch_array($resFotos)) {
+						$fotos[$i]['id_foto']      = $rowFotos['id_foto'];
+						$fotos[$i]['ref']          = $rowFotos['ref'];
+						$fotos[$i]['legenda_foto'] = $rowFotos['legenda_foto'];
+						$fotos[$i]['url_foto']     = $rowFotos['url_foto'];
+						$i++;
+					}
+					?>
+					<div class="col-6">
+						<div id="cidadesCarousel" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<? for ($i = 0; $i < ($qtdFotos / 2); $i++) { ?>
+									<? $active = (!$i) ? 'active' : ''; ?>
+									<li data-target="#cidadesCarousel" data-slide-to="<?= $i ?>" class="<?= $active ?>"></li>
+								<? } ?>
+							</ol>
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<div class="row">
+										<? for ($i = 0; $i < $qtdFotos; $i++) { ?>
+											<? if (!(($i + 1) % 3)) { ?>
+									</div>
+								</div>
+								<div class="carousel-item">
+									<div class="row">
+									<? } ?>
 									<div class="col-md-6">
-										<a href="#">
-											<img src="http://placehold.it/250x250" alt="Image">
+										<a class="zoom" href="uploads/regioes/<?= $fotos[$i]['url_foto'] ?>">
+											<img src="uploads/regioes/thumb_<?= $fotos[$i]['url_foto'] ?>" alt="<?= $fotos[$i]['legenda_foto'] ?>">
 										</a>
 									</div>
-									<div class="col-md-6">
-										<a href="#">
-											<img src="http://placehold.it/250x250" alt="Image">
-										</a>
+								<? } ?>
 									</div>
 								</div>
 							</div>
-							<div class="carousel-item">
-								<div class="row">
-									<div class="col-md-6">
-										<a href="#">
-											<img src="http://placehold.it/250x250" alt="Image">
-										</a>
-									</div>
-									<div class="col-md-6">
-										<a href="#">
-											<img src="http://placehold.it/250x250" alt="Image">
-										</a>
-									</div>
-								</div>
-							</div>
-							<div class="carousel-item">
-								<div class="row">
-									<div class="col-md-6">
-										<a href="#">
-											<img src="http://placehold.it/250x250" alt="Image">
-										</a>
-									</div>
-									<div class="col-md-6">
-										<a href="#">
-											<img src="http://placehold.it/250x250" alt="Image">
-										</a>
-									</div>
-								</div>
-							</div>
-
 						</div>
 					</div>
-				</div>
+				<? } ?>
 			</div>
 
 		</div>
@@ -115,12 +123,18 @@ require 'cms/classes/functions.php';
 			<div class="row">
 				<div class="col-7 bg-yellow">
 					<div class="icon_title">
-						<img src="assets\image\icon-star.png">
+						<img src="assets/image/icon-star.png" alt="destaques regiao">
 						<h2>Destaques da região</h2>
 					</div>
 					<div class="row mt-5">
+						<div class="col-12 pr-5">
+							<span><?= $rowRegiao['destaques_regiao'] ?></span>
+						</div>
+					</div>
+					<?/*
+					<div class="row mt-5">
 						<div class="col-2 icon_destaques">
-							<img src="assets\image\icon-predios.png">
+							<img src="assets/image/icon-predios.png">
 						</div>
 						<div class="col-10 pr-5">
 							<span>Lorem ipsum dolor sit amet. Neque omnis cudis doloremque dolores iusto cum quae quas in natus. Sit, ducimus.</span>
@@ -128,16 +142,16 @@ require 'cms/classes/functions.php';
 					</div>
 					<div class="row mt-4">
 						<div class="col-2 icon_destaques">
-							<img src="assets\image\icon-pessoas.png">
+							<img src="assets/image/icon-pessoas.png">
 						</div>
 						<div class="col-10 pr-5">
 							<span>Lorem ipsum dolor sit amet. Neque omnis cudis doloremque dolores iusto cum quae quas in natus. Sit, ducimus.</span>
 						</div>
 					</div>
+          */ ?>
 				</div>
 				<div class="col-5 text_destaques">
-					<span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta repudiandae quo doloremque, officia excepturi ea soluta nemo ratione nihil Aperiam dicta repudiandae quo doloremque<br><br>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dicta repudiandae quo doloremque, officia excepturi ea soluta nemo ratione nihil Aperiam dicta repudiandae quo doloremque</span>
+					<span><?= $rowRegiao['breve_descricao'] ?></span>
 				</div>
 			</div>
 		</div>
@@ -148,7 +162,7 @@ require 'cms/classes/functions.php';
 		<div class="container">
 			<h2>Localização</h2>
 			<div>
-				<iframe height="400px" width="100%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.5021966373893!2d-47.441391985023216!3d-23.514433384706166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf60329d5a4ab7%3A0x11958ea7ef6d3095!2sR.%20Peru%2C%20120%20-%20Vila%20Barcelona%2C%20Sorocaba%20-%20SP%2C%2018025-290!5e0!3m2!1spt-BR!2sbr!4v1567272843509!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen=""></iframe>
+				<?= $rowRegiao['mapa_localizacao'] ?>
 			</div>
 	</section>
 
