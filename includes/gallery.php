@@ -6,6 +6,7 @@ if ($qtdRegioes) {
   while ($rowRegioes = mysql_fetch_array($resRegioes)) {
     $regioes[$i]['id_regiao']         = $rowRegioes['id_regiao'];
     $regioes[$i]['nome_regiao']       = $rowRegioes['nome_regiao'];
+    $regioes[$i]['cidade_uf']         = $rowRegioes['cidade_uf'];
     $regioes[$i]['destaques_regiao']  = $rowRegioes['destaques_regiao'];
     $regioes[$i]['foto_regiao']       = $rowRegioes['foto_regiao'];
     $regioes[$i]['logo_regiao']       = $rowRegioes['logo_regiao'];
@@ -17,20 +18,25 @@ if ($qtdRegioes) {
   ?>
   <section id="regiaoCarousel">
     <div class="container">
-      <div class="col-xs-12 hidden-desktop">
+    <?/*<div class="col-xs-12 hidden-desktop">
         <div class="d-flex w-100 justify-content-center">
-          <h2><img class="icone-regiao img-fluid mr-2" src="assets/image/icon-regiao.png" alt="icone regiao"/>Regiões</h2>
+          <h2><img class="icone-regiao img-fluid mr-2" src="assets/image/icon-regiao.png" alt="icone regiao" />Regiões</h2>
         </div>
         <div>
           <!-- Select para mobile -->
-          <select name="regiao" id="" placeholder="Selecione sua Região" href="regiao/<?= cleanString($regioes[$i]['nome_regiao']) ?>-<?= $regioes[$i]['id_regiao'] ?>"></select>
-        </div>
+          <select name="regiao" onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+            <option selected disabled="disabled">Selecione a região</option>
+            <? for ($i = 0; $i < $qtdRegioes; $i++) { ?>
+              <option value="regiao/<?= cleanString($regioes[$i]['nome_regiao']) ?>-<?= $regioes[$i]['id_regiao'] ?>"><?= $regioes[$i]['nome_regiao'] ?> de <?= $regioes[$i]['cidade_uf'] ?></option>
+            <? } ?>
+          </select>
+        </div> */ ?>
       </div>
     </div>
 
-    <div class="container hidden-mobile">
+    <div class="container">
       <div class="d-flex w-100 justify-content-center">
-        <h2><img class="icone-regiao img-fluid mr-2" src="assets/image/icon-regiao.png" alt="icone regiao"/>Regiões</h2>
+        <h2><img class="icone-regiao img-fluid mr-2" src="assets/image/icon-regiao.png" alt="icone regiao" />Regiões</h2>
       </div>
       <div id="Carouselregiao" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -52,6 +58,8 @@ if ($qtdRegioes) {
             <div class="col-xs-12 col-md-3">
               <a href="regiao/<?= cleanString($regioes[$i]['nome_regiao']) ?>-<?= $regioes[$i]['id_regiao'] ?>">
                 <img class="img-regiao" src="uploads/regioes/<?= $regioes[$i]['logo_regiao'] ?>" alt="<?= $regioes[$i]['nome_regiao'] ?>">
+                <p><?= $regioes[$i]['nome_regiao'] ?><br>
+                  <?= $regioes[$i]['cidade_uf'] ?></p>
               </a>
             </div>
           <? } ?>

@@ -19,7 +19,7 @@
             <span><a href="#">Home</a> / Encontre meu lar</span>
             <div class="d-flex w-100 justify-content-center py-3">
                 <img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" />
-                <h1 class="blog">Encontre meu novo lar</h1>
+                <h1>Encontre meu novo lar</h1>
             </div>
             <div class="header-title-seta">
                 <img class="img-fluid" src="assets/image/seta.png" alt="">
@@ -29,7 +29,7 @@
 
 
     <section id="header-form">
-        <div class="container pt-5 pb-4">
+        <div class="container">
             <div class="col-12 text-center">
                 <div class="row">
                     <div class="col-md-4 active" id="dados_title">
@@ -56,6 +56,7 @@
                                 <input required="" type="text" name="nome" id="nome" class="form-control">
                                 <label>Nome:</label>
                             </div>
+                            
                             <div class="form-group col-xs-12 col-md-6">
                                 <input type="text" name="email" id="email" class="form-control">
                                 <label>E-mail:</label>

@@ -46,16 +46,16 @@ require 'cms/classes/functions.php';
 
 	?>
 
-	<!-- ____________________ header-title ____________________-->
+	<!-- ____________________ HEADER TITLE ____________________-->
 	<section id="header-title">
 		<div class="container">
 			<span><a href="home">Home</a> / <a href="regioes">Regiões</a> / <?= $rowRegiao['nome_regiao'] ?></span>
-			<div class="d-flex w-100 justify-content-center">
+			<div class="d-flex w-100 justify-content-center mt-3">
 				<img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" alt="icone regiao" />
 				<h1><?= $rowRegiao['nome_regiao'] ?></h1>
 			</div>
-			<div class="header-title-seta">
-				<img class="img-fluid" src="assets/image/seta.png" alt="seta">
+			<div class="header-title-seta hidden-mobile">
+				<img class="img-fluid hidden-mobile" src="assets/image/seta.png" alt="seta">
 			</div>
 		</div>
 	</section>
@@ -66,9 +66,9 @@ require 'cms/classes/functions.php';
 			<h2><?= $rowRegiao['nome_regiao'] ?></h2>
 			<h3><?= $rowRegiao['cidade_uf'] ?></h3>
 			<div class="row mt-4">
-				<div class="col-6">
+				<div class="col-xs-12 col-md-6 mt-2">
 					<a class="zoom" href="uploads/regioes/<?= $rowRegiao['foto_regiao'] ?>">
-						<img src="uploads/regioes/thumb_<?= $rowRegiao['foto_regiao'] ?>" alt="<?= $rowRegiao['nome_regiao'] ?>">
+						<img class="img-fluid" src="uploads/regioes/thumb_<?= $rowRegiao['foto_regiao'] ?>" alt="<?= $rowRegiao['nome_regiao'] ?>">
 					</a>
 				</div>
 				<? if ($qtdFotos) {
@@ -81,7 +81,7 @@ require 'cms/classes/functions.php';
 						$i++;
 					}
 					?>
-					<div class="col-6">
+					<div class="col-xs-12 col-md-6 mt-2">
 						<div id="cidadesCarousel" class="carousel slide" data-ride="carousel">
 							<ol class="carousel-indicators">
 								<? for ($i = 0; $i < ($qtdFotos / 2); $i++) { ?>
@@ -99,9 +99,9 @@ require 'cms/classes/functions.php';
 								<div class="carousel-item">
 									<div class="row">
 									<? } ?>
-									<div class="col-md-6">
+									<div class="col-6">
 										<a class="zoom" href="uploads/regioes/<?= $fotos[$i]['url_foto'] ?>">
-											<img src="uploads/regioes/thumb_<?= $fotos[$i]['url_foto'] ?>" alt="<?= $fotos[$i]['legenda_foto'] ?>">
+											<img class="img-fluid" src="uploads/regioes/thumb_<?= $fotos[$i]['url_foto'] ?>" alt="<?= $fotos[$i]['legenda_foto'] ?>">
 										</a>
 									</div>
 								<? } ?>
@@ -118,20 +118,21 @@ require 'cms/classes/functions.php';
 	</section>
 
 	<!-- ____________________ DESTAQUES ____________________-->
-	<section id="destaques">
+	<section id="destaques"> 
 		<div class="container">
 			<div class="row">
-				<div class="col-7 bg-yellow">
-					<div class="icon_title">
-						<img src="assets/image/icon-star.png" alt="destaques regiao">
+				<div class="col-xs-12 col-md-7 bg-yellow">
+					<div class="icon_title hidden-mobile">
+						<img class="img-fluid" src="assets/image/icon-star.png" alt="destaques regiao">
 						<h2>Destaques da região</h2>
 					</div>
+					<h2 class="hidden-desktop">Destaques da região</h2>
 					<div class="row mt-5">
 						<div class="col-12 pr-5">
 							<span><?= $rowRegiao['destaques_regiao'] ?></span>
 						</div>
 					</div>
-					<?/*
+					
 					<div class="row mt-5">
 						<div class="col-2 icon_destaques">
 							<img src="assets/image/icon-predios.png">
@@ -150,7 +151,7 @@ require 'cms/classes/functions.php';
 					</div>
           */ ?>
 				</div>
-				<div class="col-5 text_destaques">
+				<div class="col-5 text_destaques hidden-mobile">
 					<span><?= $rowRegiao['breve_descricao'] ?></span>
 				</div>
 			</div>

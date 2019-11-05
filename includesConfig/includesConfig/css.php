@@ -3,6 +3,5 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <link rel="stylesheet" href="assets/css/style.css">
   <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:400,500,700,800,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/whatsapp-window.css" />
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

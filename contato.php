@@ -19,7 +19,7 @@
 		<div class="container">
 			<span><a href="home">Home</a> / Contato</span>
 			<div class="d-flex w-100 justify-content-center py-3">
-				<img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" alt="icone regiao"/>
+				<img class="icone-regiao img-fluid mr-3" src="assets/image/icon-regiao.png" alt="icone regiao" />
 				<h1>Contato</h1>
 			</div>
 			<div class="header-title-seta">
@@ -34,76 +34,103 @@
 			<div class="container mt-5 pt-5">
 				<div class="row">
 					<div class="col-md-6">
-						<form class="formulario" name="formulario" id="formulario" action="javascript:" method="post" onsubmit="enviaContato();">
-							<div class="row">
-								<div class="form-group col-md-6">
-									<input required type="text" name="nome" id="nome" class="form-control">
-									<label>Nome</label>
-								</div>
-								<div class="form-group col-md-6">
-									<input required type="email" name="email" id="email" class="form-control">
-									<label>E-mail</label>
-								</div>
-								<div class="form-group col-md-6">
-									<input required type="text" name="telefone" id="telefone" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
-									<label>Telefone</label>
-								</div>
-								<div class="form-group col-md-6">
-									<input required type="text" name="celular" id="celular" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
-									<label>Celular</label>
-								</div>
-								<div class="form-group col-md-8">
-									<input required type="text" name="cidade" id="cidade" class="form-control">
-									<label>Cidade</label>
-								</div>
-								<div class="form-group col-md-4">
-									<!-- 
-									<input required type="text" name="cidade" id="cidade" class="form-control"> -->
+						<form action="" class="formulario" name="formulario" id="formulario" action="javascript:" method="post" onsubmit="enviaContato();">
+							<div class="form-row">
 
-									<select required="" class="form-control" name="estado" id="estado">
-										<option value="" disabled="" selected=""><label>UF</label></option>
-										<option value="AC">AC</option>
-										<option value="AL">AL</option>
-										<option value="AP">AP</option>
-										<option value="AM">AM</option>
-										<option value="BA">BA</option>
-										<option value="CE">CE</option>
-										<option value="DF">DF</option>
-										<option value="ES">ES</option>
-										<option value="GO">GO</option>
-										<option value="MA">MA</option>
-										<option value="MS">MS</option>
-										<option value="MT">MT</option>
-										<option value="MG">MG</option>
-										<option value="PA">PA</option>
-										<option value="PB">PB</option>
-										<option value="PR">PR</option>
-										<option value="PE">PE</option>
-										<option value="PI">PI</option>
-										<option value="RJ">RJ</option>
-										<option value="RN">RN</option>
-										<option value="RS">RS</option>
-										<option value="RO">RO</option>
-										<option value="RR">RR</option>
-										<option value="SC">SC</option>
-										<option value="SP">SP</option>
-										<option value="SE">SE</option>
-										<option value="TO">TO</option>
-									</select>
-								</div>
-								<div class="form-group col-md-12">
-
-									<input required type="text" name="assunto" id="assunto" class="form-control">
-									<label>Assunto</label>
+								<div class="col-xs-12 col-md-6 mb-4">
+									<div class="form">
+										<input required type="text" name="nome" id="nome" class="form-control">
+										<label for="name" class="label-name">
+											<span class="content-name">Nome</span>
+										</label>
+									</div>
 								</div>
 
-								<div class="form-group col-md-12 mt-1">
-
-									<textarea required name="mensagem" id="mensagem" rows="4" class="form-control"></textarea>
-									<label>Mensagem</label>
+								<div class="col-xs-12 col-md-6 mb-4">
+									<div class="form">
+										<input required type="email" name="email" id="email" class="form-control">
+										<label class="label-name">
+											<span class="content-name">E-mail</span>
+										</label>
+									</div>
 								</div>
 
-								<div class="form-group col-md-12 text-right">
+								<div class="col-xs-12 col-md-6 mb-4">
+									<div class="form">
+										<input required type="text" name="telefone" id="telefone" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
+										<label class="label-name">
+											<span class="content-name">Telefone</span>
+										</label>
+									</div>
+								</div>
+								<div class="col-xs-12 col-md-6 mb-4">
+									<div class="form">
+										<input required type="text" name="celular" id="celular" onKeyPress="return txtBoxFormat(this, '(99)99999-9999', event);" maxlength="16" class="form-control">
+										<label class="label-name">
+											<span class="content-name">Celular</span>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-8 mb-4">
+									<div class="form">
+										<input required type="text" name="cidade" id="cidade" class="form-control">
+										<label class="label-name">
+											<span class="content-name">Cidade</span>
+										</label>
+									</div>
+								</div>
+								<div class="col-md-4 mb-4">
+									<div class="form">
+										<select required class="form-control" name="estado" id="estado">
+											<option value="" disabled="" selected=""><label>UF</label></option>
+											<option value="AC">AC</option>
+											<option value="AL">AL</option>
+											<option value="AP">AP</option>
+											<option value="AM">AM</option>
+											<option value="BA">BA</option>
+											<option value="CE">CE</option>
+											<option value="DF">DF</option>
+											<option value="ES">ES</option>
+											<option value="GO">GO</option>
+											<option value="MA">MA</option>
+											<option value="MS">MS</option>
+											<option value="MT">MT</option>
+											<option value="MG">MG</option>
+											<option value="PA">PA</option>
+											<option value="PB">PB</option>
+											<option value="PR">PR</option>
+											<option value="PE">PE</option>
+											<option value="PI">PI</option>
+											<option value="RJ">RJ</option>
+											<option value="RN">RN</option>
+											<option value="RS">RS</option>
+											<option value="RO">RO</option>
+											<option value="RR">RR</option>
+											<option value="SC">SC</option>
+											<option value="SP">SP</option>
+											<option value="SE">SE</option>
+											<option value="TO">TO</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="col-md-12 mb-4">
+									<div class="form">
+										<input required type="text" name="assunto" id="assunto" class="form-control">
+										<label class="label-name">
+											<span class="content-name">Assunto</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="col-md-12 mt-1">
+									<div class="form">
+										<textarea required name="mensagem" id="mensagem" rows="4" class="form-control" placeholder="Mensagem"></textarea>
+
+									</div>
+								</div>
+
+								<div class="col-md-12 text-right my-3">
 									<button type="submit" class="btn btn1">Enviar</button>
 								</div>
 							</div>
@@ -126,7 +153,7 @@
 						</div>
 					</div>
 
-          <div class="col-md-12" id="retorno_msg_contato"></div>
+					<div class="col-md-12" id="retorno_msg_contato"></div>
 				</div>
 			</div>
 
@@ -138,106 +165,106 @@
 
 	<? include('includesConfig/js.php'); ?>
 
-  <script>
-    function validaForm() {
+	<script>
+		function validaForm() {
 
-      d = document.formulario;
+			d = document.formulario;
 
-      //validar nome
-      if (d.nome.value == "") {
-        alert("O campo Nome deve ser preenchido!");
-        d.nome.focus();
-        return false;
-      }
+			//validar nome
+			if (d.nome.value == "") {
+				alert("O campo Nome deve ser preenchido!");
+				d.nome.focus();
+				return false;
+			}
 
-      //validar email
-      if (d.email.value == "") {
-        alert("O campo E-mail deve ser preenchido!");
-        d.email.focus();
-        return false;
-      } else {
-        var email = d.email.value;
-        var exclude = /[^@\-\.\w]|^[_@\.\-]|[\._\-]{2}|[@\.]{2}|(@)[^@]*\1/;
-        var check = /@[\w\-]+\./;
-        var checkend = /\.[a-zA-Z]{2,3}$/;
-        if (((email.search(exclude) != -1) || (email.search(check)) == -1) || (email.search(checkend) == -1)) {
-          alert("O campo E-mail deve ser um endereço válido!");
-          d.email.focus();
-          return false;
-        }
-      }
+			//validar email
+			if (d.email.value == "") {
+				alert("O campo E-mail deve ser preenchido!");
+				d.email.focus();
+				return false;
+			} else {
+				var email = d.email.value;
+				var exclude = /[^@\-\.\w]|^[_@\.\-]|[\._\-]{2}|[@\.]{2}|(@)[^@]*\1/;
+				var check = /@[\w\-]+\./;
+				var checkend = /\.[a-zA-Z]{2,3}$/;
+				if (((email.search(exclude) != -1) || (email.search(check)) == -1) || (email.search(checkend) == -1)) {
+					alert("O campo E-mail deve ser um endereço válido!");
+					d.email.focus();
+					return false;
+				}
+			}
 
-      //validar telefone
-      if (d.telefone.value == "") {
-        alert("O campo Telefone deve ser preenchido!");
-        d.telefone.focus();
-        return false;
-      }
+			//validar telefone
+			if (d.telefone.value == "") {
+				alert("O campo Telefone deve ser preenchido!");
+				d.telefone.focus();
+				return false;
+			}
 
-      //validar celular
-      if (d.celular.value == "") {
-        alert("O campo Celular deve ser preenchido!");
-        d.celular.focus();
-        return false;
-      }
+			//validar celular
+			if (d.celular.value == "") {
+				alert("O campo Celular deve ser preenchido!");
+				d.celular.focus();
+				return false;
+			}
 
-      //validar cidade
-      if (d.cidade.value == "") {
-        alert("O campo Cidade deve ser preenchido!");
-        d.cidade.focus();
-        return false;
-      }
+			//validar cidade
+			if (d.cidade.value == "") {
+				alert("O campo Cidade deve ser preenchido!");
+				d.cidade.focus();
+				return false;
+			}
 
-      //validar estado
-      if (d.estado.value == "") {
-        alert("O campo Estado deve ser preenchido!");
-        d.estado.focus();
-        return false;
-      }
+			//validar estado
+			if (d.estado.value == "") {
+				alert("O campo Estado deve ser preenchido!");
+				d.estado.focus();
+				return false;
+			}
 
-      //validar mensagem
-      if (d.mensagem.value == "") {
-        alert("O campo Mensagem deve ser preenchido!");
-        d.mensagem.focus();
-        return false;
-      }
+			//validar mensagem
+			if (d.mensagem.value == "") {
+				alert("O campo Mensagem deve ser preenchido!");
+				d.mensagem.focus();
+				return false;
+			}
 
-      return true;
-    }
+			return true;
+		}
 
-    function enviaContato(){
-        form_valido = validaForm();
+		function enviaContato() {
+			form_valido = validaForm();
 
-        if(form_valido){
-            var formdata = new FormData($("#formulario")[0]);
-            var linkAjax = "./ajax.php?act=sendContato";
+			if (form_valido) {
+				var formdata = new FormData($("#formulario")[0]);
+				var linkAjax = "./ajax.php?act=sendContato";
 
-            $.ajax({
-                type: 'POST',
-                url: linkAjax,
-                data: formdata ,
-                processData: false,
-                contentType: false,
-                success: function(data) {
-                    console.log(data);
-                    data = $.parseJSON(data);
-                    if(!data.ErroEnvio){
-                        /*ga('send', 'event', 'envio-contato');*/
-                        var msg_retorno = data.nome+', sua mensagem foi enviada com sucesso! Retornaremos em breve.';
-                        $('#retorno_msg_contato').html('<div class="alert alert-success">'+msg_retorno+'</div>');
-                        $("#formulario input, #formulario textarea, #formulario select").val('');
-                        $('#formulario input[type=checkbox]').prop('checked', false);
+				$.ajax({
+					type: 'POST',
+					url: linkAjax,
+					data: formdata,
+					processData: false,
+					contentType: false,
+					success: function(data) {
+						console.log(data);
+						data = $.parseJSON(data);
+						if (!data.ErroEnvio) {
+							/*ga('send', 'event', 'envio-contato');*/
+							var msg_retorno = data.nome + ', sua mensagem foi enviada com sucesso! Retornaremos em breve.';
+							$('#retorno_msg_contato').html('<div class="alert alert-success">' + msg_retorno + '</div>');
+							$("#formulario input, #formulario textarea, #formulario select").val('');
+							$('#formulario input[type=checkbox]').prop('checked', false);
 
-                    } else{
-                        var msg_retorno = 'Erro: '+data.ErroEnvio;
-                        $('#retorno_msg_contato').html('<div class="alert alert-warning">'+msg_retorno+'</div>');
+						} else {
+							var msg_retorno = 'Erro: ' + data.ErroEnvio;
+							$('#retorno_msg_contato').html('<div class="alert alert-warning">' + msg_retorno + '</div>');
 
-                    }
-                },
-            });
-        }
-    }
-  </script>
+						}
+					},
+				});
+			}
+		}
+	</script>
 
 	<script>
 		$(document).ready(function() {

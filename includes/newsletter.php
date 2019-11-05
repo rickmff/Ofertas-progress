@@ -5,32 +5,32 @@
   <div class="container prl-0 padding-xs">
     <div class="row col-12 mrl-0 prl-0 pt-6">
       <div class="col-xs-12 col-md-5 pl-0 pr-4 pr-xs-0">
-        <h2>Receba nossa novidades</h2>
+        <h2>Receba nossas novidades</h2>
         <p class="hidden-mobile">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi sint error amet dolores cumque.
-        </p>
+          Para ficar por dentro de todas as nossas novidades e opções para te ajudar a encontrar o seu novo lar, basta colocar seu nome, e-mail e clique em receber novidades que cuidamos do restante. </p>
       </div>
       <div class="col-xs-12 col-md-7 prl-0">
-        <form name="frm_newsletter" id="frm_newsletter" action="javascript:" method="post" onsubmit="enviaNewsletter();">
 
+        <form action="" name="frm_newsletter" id="frm_newsletter" action="javascript:" method="post" onsubmit="enviaNewsletter();">
           <div class="form-row mt-4">
-            <div class="col-xs-12">
+            <div class="field col-xs-12">
               <input type="text" name="nome_news" id="nome_news">
-              <label>Nome</label>
+              <label for="fullname">Nome</label>
             </div>
-            <div class="col-xs-12">
-              <input type="email" name="email_news" id="email_news" placeholder="Email">
+            <div class="field col-xs-12">
+              <input type="email" name="email_news" id="email_news">
+              <label for="email">E-mail</label>
             </div>
-            <button class="btn mrl-0" type="submit">Receber novidades</button>
+            <div class="btn-news">
+              <button class="btn mrl-0" type="submit">Receber novidades</button>
+            </div>
           </div>
-
         </form>
-        <br>
-        <div class="col-md-12" id="retorno_msg_newsletter"></div>
       </div>
     </div>
   </div>
 </section>
+
 <script>
   function validaFormNewsletter() {
     d = document.frm_newsletter;

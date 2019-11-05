@@ -36,7 +36,11 @@
             </li>
           </ul>
 
-          <a href="encontrar-lar.php" class="btn">
+          <a href="encontrar-lar.php" class="btn hidden-desktop">
+            <img class="btn-icone" src="assets/image/btn-icon-chave.png" alt="icon-chave"><span>Encontre meu lar</span>
+          </a>
+          
+          <a href="encontrar-lar.php" class="btn hidden-mobile">
             <img class="btn-icone" src="assets/image/btn-icon-chave.png" alt="icon-chave"><span>Encontre meu novo lar</span>
           </a>
 

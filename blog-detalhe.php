@@ -64,11 +64,9 @@ if (is_numeric($_GET['ref'])) {
   <section id="sobre">
     <div class="container my-5 pt-3">
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
+          <img class="img-fluid mr-2 mb-2 float-left" src="uploads/posts/<?= $rowPost['thumb_post'] ?>" alt="<?= $rowPost['titulo_post'] ?>">
           <?= $rowPost['texto_post'] ?>
-        </div>
-        <div class="col-md-6">
-          <img class="img-fluid" src="uploads/posts/<?= $rowPost['thumb_post'] ?>" alt="<?= $rowPost['titulo_post'] ?>">
         </div>
       </div>
     </div>

@@ -201,5 +201,17 @@ switch ($act) {
           echo json_encode($arrRetorno);
         break;
     // ===============================================================
+    case 'sendLeadWhats':
+            $nome = mysql_real_escape_string($_POST['whats_nome']);
+            $email = mysql_real_escape_string($_POST['whats_email']);
+            $celular = mysql_real_escape_string($_POST['whats_celular']);
+            $secao = mysql_real_escape_string($_POST['whats_secao']);
+
+            GravaMailing($email, $nome, $celular, '',  'WhatsApp', $secao, '');
+            $arrRetorno['nome'] = $nome;
+
+            echo json_encode($arrRetorno);
+        break;
+    // ===============================================================
 }
 ?>
