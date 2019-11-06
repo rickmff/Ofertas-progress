@@ -17,22 +17,50 @@ body {
   text-transform: uppercase;
   font-weight: 900;
   color: black;
+  transition: 0.5s;
 }
 
 .btn:hover {
-  background-color: rgb(254, 187, 41);
-  border: 10px solid rgb(254, 187, 41);
-  transform: scale(1.1);
+  background-color: #febb29;
+  border: 10px solid #febb29;
+  transform: scale(1.03);
+  transition: 0.5s;
 }
 
 .btn .btn-white {
   border: 10px solid #4C4C4C;
   background-color: #4C4C4C;
+  transition: 0.5s;
 }
 
 .btn .btn-white:hover {
   background-color: #4C4C4C;
   border: 10px solid #4C4C4C;
+  transition: 0.5s;
+}
+
+.btn-top {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background-color: transparent !important;
+  z-index: 10;
+  border: 0;
+  width: 55px;
+  height: 55px;
+  padding: 0;
+  display: none;
+  transition: 0.5s;
+}
+
+.btn-top:hover {
+  background-color: transparent;
+  border: 0;
+  transition: 0.5s;
+}
+
+.btn-top:focus {
+  outline: 0;
 }
 
 .bg-gray {
@@ -82,8 +110,49 @@ body {
   top: 0px !important;
 }
 
+.decoration-none {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 769px) {
+  .hidden-desktop {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .hidden-mobile {
+      display: none;
+  }
+  .expand {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+  }
+  body {
+      margin-top: 9rem !important;
+  }
+  .mobile-ajust {
+      padding-left: 15px !important;
+      text-align: center !important;
+  }
+  .text-xs-center {
+      text-align: center !important;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .expand {
+      padding-bottom: 0 !important;
+      padding-top: 0 !important;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+  }
+}
+
 /* HEADER
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 header .bg-light {
   background-color: white !important;
@@ -109,14 +178,17 @@ header .nav-link {
   font-weight: 800;
   color: black !important;
   cursor: pointer;
+  transition: 0.5s;
 }
 
 header .dropdown-toggle::after {
   color: #FECC29 !important;
+  transition: 0.5s;
 }
 
 header .nav-item :hover {
   color: #FECC29 !important;
+  transition: 0.5s;
 }
 
 header .btn-icone {
@@ -129,17 +201,31 @@ header .btn-icone {
 .dropdown-item {
   text-transform: uppercase;
   font-size: 0.9rem;
+  transition: 0.5s;
 }
 
 .dropdown-item:active {
   background-color: white;
 }
 
+/* HEADER MOBILE */
+
+@media screen and (max-width: 769px) {
+  header .retract {
+      transition: 0.5s all;
+      padding-top: 0.5rem !important;
+      padding-bottom: 0rem !important;
+  }
+  header {
+      text-align: center !important;
+  }
+}
+
 /* xxxxxxxxxxxxxx INDEX xxxxxxxxxxxxxx
 ----------------------------------------*/
 
 /* BANNER
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #banner .carousel {
   margin-bottom: 4rem;
@@ -158,8 +244,22 @@ header .btn-icone {
   margin-top: -31px !important;
 }
 
+/*BANNER MOBILE*/
+
+@media screen and (max-width: 769px) {
+  #banner {
+      display: none;
+  }
+  .title-section h1 {
+      font-size: 1.75rem !important;
+  }
+  #como-funciona-div .col-md-4 {
+      padding-left: 0 !important;
+  }
+}
+
 /* COMO FUNCIONA DIV
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #como-funciona-div h1 {
   display: flex;
@@ -199,18 +299,33 @@ header .btn-icone {
   width: 100%;
   justify-content: center;
   margin-top: 5rem;
+  transition: 0.5s;
+}
+
+@media screen and (max-width:769px) {
+  .btn-saibaMais {
+      margin-top: 2rem;
+  }
+  #como-funciona-div {
+      padding-bottom: 4rem;
+      padding-top: 1rem;
+  }
 }
 
 /* CASOS DE SUCESSO DIV
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 .bg-yellow {
   background-color: #FFCC29;
-  height: 500px;
+  min-height: 500px;
   width: auto;
   margin-left: 0;
   padding-left: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.bg-yellow img {
+  max-height: 500px;
 }
 
 #casos-div .title-section h2 {
@@ -220,6 +335,10 @@ header .btn-icone {
   padding-top: 5rem;
   padding-bottom: 4rem;
   padding-left: 15px;
+}
+
+#depoimentosCarousel {
+  overflow-y: hidden;
 }
 
 #casos-div .avatar {
@@ -234,11 +353,13 @@ header .btn-icone {
 #casos-div a {
   font-size: 0.8rem;
   padding: auto;
+  transition: 0.5s;
 }
 
 #casos-div a:hover {
   transform: scale(1) !important;
   cursor: default;
+  transition: 0.5s;
 }
 
 #casos-div .btn {
@@ -248,6 +369,7 @@ header .btn-icone {
   text-transform: none;
   border: 5px solid black;
   float: right;
+  transition: 0.5s;
 }
 
 #casos-div .carousel-indicators {
@@ -266,8 +388,49 @@ header .btn-icone {
   background: white;
 }
 
+@media screen and (width: 769px) {
+  #casos {
+      display: none;
+  }
+}
+
+@media screen and (max-width:769px) {
+  .bg-yellow {
+      padding-bottom: 1rem;
+  }
+  #casos-div .title-section h2 {
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 0;
+      margin-left: 0;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      font-size: 1.75rem !important;
+  }
+  #casos-div .carousel-item {
+      display: none;
+  }
+  #casos-div .carousel-item:first-child {
+      display: block !important;
+  }
+  #casos-div .title-section {
+      padding-right: 0px !important;
+  }
+  .mobile-center {
+      display: flex !important;
+      justify-content: center !important;
+      margin-bottom: 2rem !important;
+  }
+  #casos-div .carousel-indicators {
+      display: none;
+  }
+  #casos-div p {
+      text-align: center !important;
+  }
+}
+
 /* REGIAO CAROUSEL
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #regiaoCarousel {
   margin-bottom: 5rem;
@@ -287,6 +450,16 @@ header .btn-icone {
   height: 15rem;
 }
 
+#regiaoCarousel .carousel-item a {
+  text-decoration: none;
+}
+
+#regiaoCarousel .carousel-item p {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
 #regiaoCarousel .carousel-indicators li {
   background: black;
   border-radius: 50%;
@@ -304,13 +477,27 @@ header .btn-icone {
   max-width: 100%;
 }
 
+#regiaoCarousel select {
+  font-size: 22px;
+  display: block;
+  background: #E7E7E7;
+  color: black;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
 /* BLOG-DIV
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #blog-div {
   padding-top: 5rem;
   padding-bottom: 8rem;
   background-color: #F3F3F3;
+}
+
+#blog-div .col-7 {
+  align-self: center;
 }
 
 #blog-div span {
@@ -325,14 +512,24 @@ header .btn-icone {
 }
 
 #blog-div h2 {
-  justify-content: center;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 900;
+  overflow-y: hidden;
 }
 
-#blog-div p {
+#blog-div .line-h-up p {
   line-height: 1.7rem;
+}
+
+#blog-div a {
+  color: black;
+  text-decoration: none;
+}
+
+#blog-div a:hover {
+  color: #F1CB3F;
+  text-decoration: none;
 }
 
 #blog-div .blog-saibaMais a {
@@ -352,13 +549,46 @@ header .btn-icone {
   text-decoration: none;
 }
 
+#blog-div select {
+  font-size: 18px;
+  display: block;
+  background: #E7E7E7;
+  color: #999;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+@media screen and (max-width:769px) {
+  #blog-div {
+      padding-top: 1rem;
+      padding-bottom: 5rem;
+  }
+  .py-xs-5 {
+      padding-top: 3rem !important;
+  }
+  .pr-xs-0 {
+      padding-right: 0 !important;
+  }
+  .pr-xs-1 {
+      padding-right: 15px !important;
+  }
+  .padding-xs {
+      padding-right: 0.3rem !important;
+      padding-left: 0.3rem !important;
+  }
+  #blog-div .col-md-4 {
+      padding-bottom: 2rem;
+  }
+}
+
 /* NEWSLETTER
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #newsletter {
   background: #4C4C4C;
   color: white;
-  height: 320px;
+  min-height: 320px;
 }
 
 #newsletter .seta {
@@ -381,7 +611,7 @@ header .btn-icone {
 
 #newsletter h2 {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 900;
 }
 
@@ -390,46 +620,120 @@ header .btn-icone {
   padding-right: 2rem;
 }
 
-#newsletter input {
-  font-size: 18px;
-  padding: 20px 10px 10px 5px;
-  -webkit-appearance: none;
-  display: block;
-  background: #4C4C4C;
-  color: white;
-  width: 100%;
-  border-radius: 20px;
-  border: 2px solid white;
-}
-
-#newsletter input:focus {
-  outline: none;
-}
-
-#newsletter label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 15px;
-  top: 15px;
-  transition: all 0.2s ease;
-}
-
-#newsletter input:focus~label, input.used~label {
-  top: -30px;
-  transform: scale(.75);
-  left: 10px;
-  color: white;
+#newsletter .btn {
+  border-color: white;
+  background: white;
 }
 
 #newsletter .btn:hover {
+  border-color: #F1CB3F;
+  background: #F1CB3F;
   transform: none;
+  transition: 0.5s;
+}
+
+.btn-news {
+  margin-top: 1.45rem;
+}
+
+@media screen and (max-width:769px) {
+  #newsletter h2 {
+      font-size: 1.6rem;
+  }
+  #newsletter .btn {
+      margin-top: 2rem;
+      margin-left: 0.3rem !important;
+  }
+  #newsletter input:placeholder-shown+label {
+      transform: translate(0.75rem, 3rem) scale(1.2);
+  }
+  #newsletter .col-xs-12 {
+      width: 100% !important;
+  }
+  .btn-news {
+      position: relative;
+      left: 15%;
+      margin-bottom: 2rem;
+      margin-top: 0 !important;
+  }
+  input:focus::-webkit-input-placeholder {
+      opacity: 0;
+  }
+}
+
+/* FORMULARIOS
+-------------------------------------------------- */
+
+#newsletter .field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+
+#newsletter label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+#newsletter input {
+  cursor: text;
+  font-size: 16px;
+  padding: 20px 5px 10px 10px;
+  -webkit-appearance: none;
+  display: block;
+  background: none;
+  color: white;
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid white;
+  z-index: 2;
+}
+
+#newsletter input:focus label {
+  outline: 0;
+  transform: scale(.75);
+  color: white;
+}
+
+#newsletter input:focus {
+  outline: 0 !important;
+}
+
+#newsletter label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: white;
+}
+
+#newsletter input:placeholder-shown+label {
+  cursor: text;
+  max-width: 66.66%;
+  padding-bottom: 0.4rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(0.75rem, 3rem) scale(1.2);
+}
+
+#newsletter ::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+#newsletter input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+#newsletter input:not(:placeholder-shown)+label, input:focus+label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
 }
 
 /* FOOTER 
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 footer {
   background-color: #161616;
@@ -446,6 +750,19 @@ footer img {
 
 footer .square img {
   border-radius: 0 !important;
+}
+
+footer .fa-instagram {
+  padding: 0 10px 0 10px;
+  transform: scale(1.2);
+}
+
+footer .fa-youtube-square {
+  transform: scale(1.2);
+}
+
+footer .fa-facebook-square {
+  transform: scale(1.2);
 }
 
 footer h4 {
@@ -481,11 +798,23 @@ footer .btn span {
   color: #FECC29;
 }
 
+@media screen and (max-width:769px) {
+  footer {
+      padding-top: 3rem;
+  }
+  footer .creditos {
+      padding-top: 2rem;
+  }
+  footer .mobile-left {
+      float: left !important;
+  }
+}
+
 /* xxxxxxxxxxxxxx REGIAO xxxxxxxxxxxxxx
 ----------------------------------------*/
 
 /* header-title
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #header-title {
   background-color: #E7E7E7;
@@ -500,11 +829,13 @@ footer .btn span {
 #header-title a {
   font-weight: 600;
   color: black;
+  transition: 0.5s;
 }
 
 #header-title a:hover {
   text-decoration: none;
   color: #FFCC29;
+  transition: 0.5s;
 }
 
 #header-title span {
@@ -532,8 +863,26 @@ footer .btn span {
   transform: translate(50%);
 }
 
+@media screen and (max-width:769px) {
+  #header-title h1 {
+      font-size: 1.5rem;
+  }
+  .header-title-seta img {
+      top: 313px
+  }
+  #header-title {
+      min-height: 200px !important;
+  }
+}
+
+@media screen and (max-width:400px) {
+  #header-title .blog {
+      font-size: 1.2rem;
+  }
+}
+
 /* CIDADES
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #cidades {
   margin-top: 5rem;
@@ -571,7 +920,7 @@ footer .btn span {
 }
 
 /* DESTAQUES
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #destaques {
   margin-top: 5rem;
@@ -584,7 +933,6 @@ footer .btn span {
   padding-bottom: 4rem;
   padding-left: 5rem;
   padding-right: 4rem;
-  max-height: 410px;
 }
 
 #destaques h2 {
@@ -618,8 +966,8 @@ footer .btn span {
   padding-right: 0;
 }
 
-/* LOCALIZAÇÃO
-  -------------------------------------------------- */
+/* LOCALIZAÃ‡ÃƒO
+-------------------------------------------------- */
 
 #localizacao .container {
   padding-left: 0;
@@ -639,13 +987,27 @@ footer .btn span {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  #localizacao {
+      text-align: center;
+      margin-top: 0rem !important;
+      margin-bottom: 0rem !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  section.cidades {
+      text-align: center;
+  }
+}
+
 /* ATENDIMENTO
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #atendimento {
+  overflow: hidden;
   background-color: #1598BD;
   color: white;
-  height: 320px;
+  min-height: 320px;
   width: 100%;
   line-height: 1.5rem;
 }
@@ -680,11 +1042,27 @@ footer .btn span {
   border-color: #F3F3F3;
 }
 
+@media screen and (max-width:769px) {
+  #atendimento h2 {
+      text-align: center;
+  }
+  #atendimento .align-self-end {
+      text-align: center !important;
+  }
+  #atendimento a {
+      margin-left: 0 !important;
+  }
+}
+
 /* xxxxxxxxxxxxxx QUEM SOMOS xxxxxxxxxxxxxx
 --------------------------------------------*/
 
 /* SOBRE
-  -------------------------------------------------- */
+-------------------------------------------------- */
+
+#sobre {
+  margin-top: 5rem;
+}
 
 #sobre h1 {
   text-transform: uppercase;
@@ -701,8 +1079,25 @@ footer .btn span {
   border-radius: 20px;
 }
 
+.img-sobre {
+  max-width: 600px;
+  max-height: 500px;
+  margin-left: 0.75rem;
+  margin-bottom: 0.5rem;
+  float: right;
+}
+
+@media screen and (max-width: 769px) {
+  #header-title h1 {
+      padding-right: 0 !important;
+  }
+  #sobre {
+      margin-top: -2rem;
+  }
+}
+
 /* CAROUSEL SOBRE
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #carouselSobre img {
   border-radius: 20px;
@@ -725,7 +1120,7 @@ footer .btn span {
 }
 
 /* VALORES
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #valores {
   padding-top: 4rem;
@@ -742,7 +1137,7 @@ footer .btn span {
 }
 
 /* como-funciona-div-sobre
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #como-funciona-div-sobre {
   background: #F1CB3F;
@@ -765,16 +1160,15 @@ footer .btn span {
 ----------------------------------------------*/
 
 /* ETAPAS
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 section.como-funciona {
-  background: #f8faff;
-  padding: 0px 0 60px;
+  margin-top: 6rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.como-funciona {
-    padding: 0px 0 40px;
+      padding: 0px 0 40px;
   }
 }
 
@@ -785,28 +1179,28 @@ section.como-funciona h1 {
   font-size: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.como-funciona h1 {
-    padding-bottom: 30px;
+      padding-bottom: 30px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.como-funciona h1:before {
-    left: 40%;
-    top: -70px;
+      left: 40%;
+      top: -70px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.como-funciona .text-cf-margin {
-    margin-top: 0;
+      margin-top: 0;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.como-funciona img {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
   }
 }
 
@@ -816,9 +1210,9 @@ section.como-funciona .text-cf {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   section.como-funciona .text-cf {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
   }
 }
 
@@ -852,7 +1246,7 @@ section.como-funciona img {
 ----------------------------------------------------*/
 
 /* CASOS
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 .center {
   display: flex;
@@ -876,11 +1270,13 @@ section.como-funciona img {
 #casos a {
   font-size: 1rem;
   padding: auto;
+  transition: 0.5s;
 }
 
 #casos a:hover {
   transform: scale(1) !important;
   cursor: default;
+  transition: 0.5s;
 }
 
 #casos .btn {
@@ -896,7 +1292,7 @@ section.como-funciona img {
 ----------------------------------------------------*/
 
 /* CAROUSEL BLOG
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #blogCarousel img {
   opacity: 0.5;
@@ -923,7 +1319,7 @@ section.como-funciona img {
 ----------------------------------------------------*/
 
 /* TITLE CONTATO
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #contato h1 {
   font-weight: 900;
@@ -935,72 +1331,12 @@ section.como-funciona img {
   background-color: black;
   border-color: black;
   color: #FFCC29;
+  transition: 0.5s;
 }
 
 #contato .btn:hover {
-  transform: scale(1.05);
-}
-
-#contato .form-group {
-  margin-bottom: 1.5rem;
-}
-
-#contato label {
-  color: #999;
-  font-size: 18px;
-  font-weight: normal;
-  position: absolute;
-  pointer-events: none;
-  left: 25px;
-  top: 10px;
-  transition: all 0.2s ease;
-}
-
-#contato input:focus~label, input.used~label {
-  top: -22px;
-  transform: scale(.75);
-  left: 10px;
-  color: black;
-  font-weight: 500;
-}
-
-#contato input {
-  font-size: 18px;
-  padding: 20px 10px 10px 5px;
-  -webkit-appearance: none;
-  display: block;
-  background: #E7E7E7;
-  color: black;
-  width: 100%;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-#contato input:focus {
-  outline: none;
-}
-
-#contato textarea:focus~label, textarea.used~label {
-  top: -22px;
-  transform: scale(.75);
-  left: 10px;
-  color: black;
-}
-
-#contato textarea {
-  font-size: 18px;
-  padding: 20px 10px 10px 5px;
-  -webkit-appearance: none;
-  display: block;
-  background: #E7E7E7;
-  color: black;
-  width: 100%;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-#contato textarea:focus {
-  outline: none;
+  transform: scale(1.03);
+  transition: 0.5s;
 }
 
 #contato .bg-gray {
@@ -1012,28 +1348,53 @@ section.como-funciona img {
   margin-bottom: 0;
 }
 
-#contato select {
-  font-size: 18px;
-  display: block;
-  background: #E7E7E7;
-  color: #999;
+/* FORMULARIO CONTATO */
+
+.form-control {
+  color: black;
+  border: 1px solid black;
+  background-color: #E7E7E7;
+}
+
+.form-control:focus {
+  outline: 0;
+  border: 1px solid black;
+  background-color: #E7E7E7;
+}
+
+.form label {
+  position: absolute;
+  bottom: 0;
+  left: 0%;
   width: 100%;
-  border: 2px solid black;
-  border-radius: 10px;
+  height: 100%;
+  pointer-events: none;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+  transition: all 0.3s ease;
+}
+
+.form input:focus+.label-name .content-name, .form input:valid+.label-name .content-name {
+  transform: translateY(-1.75rem);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+textarea::placeholder {
+  color: black;
 }
 
 /* xxxxxxxxxxxxxx BUSCAR xxxxxxxxxxxxxx
 ----------------------------------------*/
 
 /* ENCONTRE MEU LAR
-  -------------------------------------------------- */
+-------------------------------------------------- */
 
 #dados {
-  padding-left: 10rem;
-  padding-right: 10rem;
-}
-
-#localizacao {
   padding-left: 10rem;
   padding-right: 10rem;
 }
@@ -1047,20 +1408,22 @@ section.como-funciona img {
   background-color: black;
   color: white;
   text-transform: uppercase;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 #header-form h2 {
   font-size: 1.5rem;
   font-weight: 700;
   padding-bottom: 1rem;
-  border-bottom: 5px solid white;
+  border-bottom: 3px solid white;
 }
 
 #header-form .active h2 {
   transition: 0.5s;
   color: #FECC29;
   padding-bottom: 1rem;
-  border-bottom: 5px solid #FECC29;
+  border-bottom: 3px solid #FECC29;
 }
 
 #buscar-lar h1 {
@@ -1155,4 +1518,38 @@ section.como-funciona img {
   border-color: black;
   color: white;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 769px) {
+  #dados {
+      padding-left: 0rem;
+      padding-right: 0rem;
+  }
+  #header-form {
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+  }
+  #header-form h2 {
+      display: none;
+  }
+  #header-form .active h2 {
+      display: block;
+  }
+}
+
+.followus a>i {
+  background: transparent;
+  color: #fff;
+  font-size: 30px;
+}
+
+#regioes-page a {
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+#regioes-page img {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
